@@ -62,7 +62,7 @@ Simple list of related posts by author.
 Something special you only want to show to logged out users? Or vice versa? 
 
 ```[logged_out]stuff only logged out users see[/logged_out]``` \
-```[logged_in]stuff only logged out users see[/logged_in]```
+```[logged_in]stuff only logged in users see[/logged_in]```
 
 * Note: This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.
 
