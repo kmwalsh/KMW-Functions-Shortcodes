@@ -8,9 +8,9 @@ You should download this and use it as a mu-plugin, and modify it to suit your n
 
 ## Other Included
 * 2 code (JS, CSS) files total
+** JavaScript contains script that forces all external links to open in a new window.
+** CSS contains Social Icons CSS, fancy buttons CSS, and click-to-call phone number CSS
 * 4 font files total
-* JavaScript contains script that forces all external links to open in a new window.
-* CSS contains Social Icons CSS, fancy buttons CSS, and click-to-call phone number CSS
 
 ## Helpers and Functions
 ### HF1. Truncate
@@ -18,7 +18,7 @@ Shortens a longer text (for example: the excerpt, the content, a custom meta val
 
 ```<?php echo kmw__truncate($content, 175); ?>```
 
-## HF2. 404 & Error Text
+### HF2. 404 & Error Text
 Useful error pages are great! I usually use this in the 404 template and sometimes the "none" template, depending on the site type. 
 
 * Note: Pay attention to the URLs -- e.g., sitemap, contact. They might be different for you and I can't guess what your page names/permalinks are.
@@ -45,10 +45,10 @@ Redirects any URL with wp-admin for everyone but administrator-level users. Usef
 They can really clog your database and get unruly rather quickly, so why not define it? Set to 10 revisions.
 
 ### HF9. Contributor Uploads (PERMISSIONS)
-Allow contributor uploads, simple. Contributors don't have this permission by default and it's an often-used feature.
+Allow contributor uploads, simple. Contributors don't have this permission by default and it's an often-used feature. The other way to accomplish this involves installing [User Role Editor](https://wordpress.org/plugins/user-role-editor/), copy the Contributor role, and enabling it that way... *much* easier this way.
 
 ### HF10. Dropdown Sorting
-Display a handy drop-down menu that forwards the visitor to their selection. You can subtitute your custom taxonomy for 'category.'
+Display a handy drop-down menu that forwards the visitor to their selection. You can substitute your custom taxonomy for 'category.'
 
 ```<?php echo kmw__sort_category_header('category'); ?>```
 
