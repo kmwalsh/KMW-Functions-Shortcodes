@@ -18,28 +18,28 @@ Anything marked with * needs to be customized for your site.
 ### SECTION I: Helpers & Functions
 Located in ```kmw-fs/helpers-functions.php```
 
-HF1. Truncade
-HF2. *404 & Error Text
-HF3. WP E-Mail Name
-HF4. Strip WP Script Versions
-HF5. Strip WP Version
-HF6. Boot Non-Admin from WP Admin (disabled by default)
-HF7. Google Analytics
-HF8. Post Revisions
-HF9. Dropdown Sorting
-HF10. Related Posts by Author
+* HF1. Truncate
+* HF2. *404 & Error Text
+* HF3. WP E-Mail Name
+* HF4. Strip WP Script Versions
+* HF5. Strip WP Version
+* HF6. Boot Non-Admin from WP Admin (disabled by default)
+* HF7. Google Analytics
+* HF8. Post Revisions
+* HF9. Dropdown Sorting
+* HF10. Related Posts by Author
 
 ### SECTION II: Shortcodes
 Located in ```kmw-fs/shortcodes.php```
 
-SC1. Logged In & Logged Out Content
-SC2. Fancy Buttons
-SC3. *Social Media Icons
-SC4. *Google Maps
-SC5. *Phone Number
-SC6. *HTML Sitemap
-SC7. Site Info
-SC8. Current Year
+* SC1. Logged In & Logged Out Content
+* SC2. Fancy Buttons
+* SC3. *Social Media Icons
+* SC4. *Google Maps
+* SC5. *Phone Number
+* SC6. *HTML Sitemap
+* SC7. Site Info
+* SC8. Current Year
 
 ## Helpers and Functions
 ### HF1. Truncate
