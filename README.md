@@ -45,14 +45,14 @@ Located in ```kmw-fs/shortcodes.php```
 ### HF1. Truncate
 Shortens a longer text (for example: the excerpt, the content, a custom meta value) to a number of characters you specify.  The number is optional and defaults to 25, but you can change it to whatever you'd like. [More Information](http://stackoverflow.com/questions/9219795/truncating-text-in-php)
 
-```<?php echo kmw__truncate($content, 175); ?>```
+Use: ```<?php echo kmw__truncate($content, 175); ?>```
 
 ### HF2. 404 & Error Text
 Useful error pages are great! I usually use this in the 404 template and sometimes the "none" template, depending on the site type. 
 
 * Note: Pay attention to the URLs -- e.g., sitemap, contact. They might be different for you and I can't guess what your page names/permalinks are.
 
-```<?php echo kmw_none_404_help_text(); ?>```
+Use: ```<?php echo kmw_none_404_help_text(); ?>```
 
 ### HF3--HF6. Cleaner Functions
 * **HF3, WordPress E-Mail Name**: Makes the WP e-mails (e.g., new user, lost PW, etc.) come from the site name instead of "WordPress." It uses ```get_bloginfo()``` to fetch the site name.
@@ -77,19 +77,18 @@ They can really clog your database and get unruly rather quickly, so why not def
 ### HF9. Dropdown Sorting
 Display a handy ul/li based drop-down menu that forwards the visitor to their selection. You can subtitute your custom taxonomy for 'category.'
 
-```<?php echo kmw__sort_category_header('category'); ?>```
+Use: ```<?php echo kmw__sort_category_header('category'); ?>```
 
 ### HF10. Related Posts by Author
 Simple list of related posts by author.
 
-```<?php echo kmw__get_author_related(); ?>```
+Use: ```<?php echo kmw__get_author_related(); ?>```
 
 ## Shortcodes
 ### SC1. Logged In & Logged Out Content
 Something special you only want to show to logged out users? Or vice versa? 
 
-```[logged_out]stuff only logged out users see[/logged_out]``` \
-```[logged_in]stuff only logged in users see[/logged_in]```
+Use: ```[logged_out]stuff only logged out users see[/logged_out]``` or ```[logged_in]stuff only logged in users see[/logged_in]```
 
 * Note: This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.
 
@@ -111,12 +110,12 @@ Use: ```[kmw_social]```
 ### SC4. Google Maps
 Useful so you don't have to change the Google map twenty times if the code changes, etc.. Height/width can accept pixel, percentage, or whatever else you'd like.
 
-```[kmw_googlemap height="" width=""]```
+Use:```[kmw_googlemap height="" width=""]```
 
 ### SC5. Phone Number
 Desktop or [click-to-call for mobile](http://katemwalsh.com/fixed-position-click-to-call-mobile-phone-number-code/). Again, useful so you don't have to change it twenty times if the phone number changes (which it can -- call forwarding/tracking services are a great reason to make use of this code).
 
-```[kmw_get_phone mobile="true or false"]```
+Use: ```[kmw_get_phone mobile="true or false"]```
 
 * Note: You should *only* include the mobile number *once*.
 
@@ -125,17 +124,16 @@ HTML sitemap pages are useful for human visitors. This is a two-part shortcode b
 
 ```[kmw_categories]```  simply fetches a list of your blog categories. ```[kmw_pages]``` duplicates the primary menu since you might have "off-menu" pages you don't want to display. If you want a straight list of all pages regardless of the menu, you'll want [wp_list_pages()](http://codex.wordpress.org/Function_Reference/wp_list_pages).
 
-```[kmw_categories]``` \
-```[kmw_pages]```
+Use: ```[kmw_categories]``` or ```[kmw_pages]```
 
 * Note: you need to change the code to use the ID of your primary menu.
 
 ### SC7. Site Info
 Uses ```get_bloginfo()``` to return data about the website. See [get_bloginfo() on the Codex](https://codex.wordpress.org/Function_Reference/get_bloginfo) for a full list of what can be returned with the key. Useful for placing the site's name in content. If your site rebrands later, you won't need to change the name in a million places *or* mess with MySQL replacements.
 
-```[site_info key="name"]```
+Use: ```[site_info key="name"]```
 
 ### SC8. Current Year
 Just uses PHP to fetch the current year. Possibly useful for copyright notices, freshening content, etc.
 
-```[kmw_year]```
+Use: ```[kmw_year]```
