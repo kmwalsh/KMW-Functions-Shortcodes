@@ -96,14 +96,14 @@ Something special you only want to show to logged out users? Or vice versa?
 ## SC2. Fancy Buttons
 Buttons with a fancy title & subtitle. Use CSS to make the span smaller & block.
 
-```[button link="#!" target="_self, _blank" subtitle=""]Primary[/button]```
+Use: ```[button link="#!" target="_self, _blank" subtitle=""]Primary[/button]```
 
 * Note: Sample CSS included.
 
 ### SC3. Social Media Icons
 Uses [Font Awesome](https://fortawesome.github.io/Font-Awesome/cheatsheet/).
 
-```[kmw_social]```
+Use: ```[kmw_social]```
 
 * Note: Sample CSS for *all* FontAwesome included.
 * Default social media networks: Twitter, Facebook, GitHub, Codepen, Instagram, Pinterest, Reddit, LinkedIn, SoundCloud, YouTube, Google+, RSS, E-Mail
