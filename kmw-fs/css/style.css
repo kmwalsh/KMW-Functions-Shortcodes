@@ -32,27 +32,8 @@ a#floating-mobile-phone { display:none; }
 
 
 /* ====================================
-  SC5. PHONE NUMBER
+  SC5. SOCIAL ICONS
 --------------------------------------------------------------------- */
-@font-face {
-    font-family: 'si';
-    src: url('../fonts/socicon.eot');
-    src: url('../fonts/socicon.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/socicon.woff') format('woff'),
-         url('../fonts/socicon.ttf') format('truetype'),
-         url('../fonts/socicon.svg#icomoonregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
- 
-}
- 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    @font-face {
-        font-family:si;
-        src: url(../fonts/socicon.svg) format(svg);
-    }
-}
-
 .soc {
     overflow:hidden;
     margin:0; padding:0;
@@ -66,101 +47,59 @@ a#floating-mobile-phone { display:none; }
 }
 
 .soc li a {
-    font-family:si!important;
+    color: #fff !important;
+    font-family: "Font Awesome" !important;
+    
     font-style:normal;
-    font-weight:400;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    -ms-box-sizing:border-box;
-    -o-box-sizing:border-box;
-    box-sizing:border-box;
-    overflow:hidden;
     text-decoration:none;
+    font-weight:400;    
     text-align:center;
-    display:block;
-    position: relative;
-    z-index: 1;
+    
+    font-size: 17px;
+    
     width: 32px;
     height: 32px;
     line-height: 32px;
-    font-size: 17px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
+    
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    
+      -webkit-box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      -ms-box-sizing:border-box;
+      -o-box-sizing:border-box;
+    box-sizing:border-box;
+    
+    overflow:hidden;
+    display:block;
+    position: relative;
     margin-right: 4px;
-    color: #ffffff;
+    z-index: 1;
+    
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+    border-radius: 0px;
+    
     background-color: none;
 }
 
-.soc-icon-last{
-    margin:0 !important;
+.soc li i {
+	display:block;
+  line-height: 32px;
 }
 
-.soc-twitter {
-    background-color: #4da7de;
-}
-.soc-twitter:before {
-    content:'a';
-}
-.soc-reddit {
-    background-color: #e74a1e;
-}
-.soc-reddit:before {
-    content:'C';
-}
-.soc-instagram {
-    background-color: #9c7c6e;
-}
-.soc-instagram:before {
-    content:'x';
-}
-.soc-email1 {
-    background-color: #578AD6;
-}
-.soc-email1:before {
-    content:'<';
-}
-.soc-soundcloud {
-    background-color: #fe3801;
-}
-.soc-soundcloud:before {
-    content:'n';
-}
-.soc-facebook {
-    background-color: #3e5b98;
-}
-.soc-facebook:before {
-    content:'b';
-}
-.soc-google {
-    background-color: #d93e2d;
-}
-.soc-google:before {
-    content:'c';
-}
-.soc-pinterest {
-    background-color: #c92619;
-}
-.soc-pinterest:before {
-    content:'d';
-}
-.soc-linkedin {
-    background-color: #3371b7;
-}
-.soc-linkedin:before {
-    content:'j';
-}
-.soc-youtube {
-    background-color: #e02a20;
-}
-.soc-youtube:before {
-    content:'r';
-}
-.soc-rss {
-    background-color: #f26109;
-}
-.soc-rss:before {
-    content:',';
-}
+.soc-icon-last{ margin:0 !important; }
+
+.soc-twitter { background-color: #4da7de; }
+.soc-reddit { background-color: #e74a1e; }
+.soc-instagram { background-color: #9c7c6e; }
+.soc-email1 { background-color: #578AD6; }
+.soc-soundcloud { background-color: #fe3801; }
+.soc-facebook { background-color: #3e5b98; }
+.soc-google { background-color: #d93e2d; }
+.soc-pinterest { background-color: #c92619; }
+.soc-linkedin { background-color: #3371b7; }
+.soc-youtube { background-color: #e02a20; }
+.soc-rss { background-color: #f26109; }
+.soc-github { background-color: #5380c0; }
+.soc-codepen { background-color: #595959; }

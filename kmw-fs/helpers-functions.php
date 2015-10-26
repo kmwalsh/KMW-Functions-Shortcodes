@@ -88,7 +88,7 @@ HF6. STRIP ADMIN BAR FOR NON-ADMIN
 --------------------------------------------------------------------- */
 add_action('after_setup_theme', 'kmw__remove_admin_bar');
 
-if ( ! function_exists( 'kmw__remove_version' ) ) {
+if ( ! function_exists( 'kmw__remove_admin_bar' ) ) {
 	function kmw__remove_admin_bar() {
 		if (!current_user_can('administrator') && !is_admin()) {
 		  show_admin_bar(false);
@@ -98,8 +98,10 @@ if ( ! function_exists( 'kmw__remove_version' ) ) {
 
 
 /* ====================================
-HF6. BOOT NON-ADMIN FROM WP-ADMIN
---------------------------------------------------------------------- */
+HF6. BOOT NON-ADMIN FROM WP-ADMIN 
+DISABLED by default
+
+
 add_action( 'init', 'kmw__blockusers_init' );
 
 if ( ! function_exists( 'kmw__remove_version' ) ) {
@@ -110,6 +112,7 @@ if ( ! function_exists( 'kmw__remove_version' ) ) {
 		}
 	}
 }
+--------------------------------------------------------------------- */
 
 
 /* ====================================
@@ -119,7 +122,17 @@ add_action('wp_footer', 'kmw__add_googleanalytics');
 
 if ( ! function_exists( 'kmw__add_googleanalytics' ) ) {
 	function kmw__add_googleanalytics() {
-		// put your Google Analytics JavaScript code here
+		if ( ! is_admin() ) {
+		ob_start(); ?>
+		
+<script>
+// add Google Analytics code here
+</script>
+
+		<?php
+			$return = ob_get_clean();
+			print $return;
+		}
 	}
 }
 
@@ -131,20 +144,9 @@ if ( ! defined('WP_POST_REVISIONS')) {
 	define('WP_POST_REVISIONS', 10);
 }
 
-/* ====================================
-HF9. CONTRIBUTOR UPLOADS
---------------------------------------------------------------------- */
-function kmw__allow_contributor_uploads() {
-	$contributor = get_role('contributor');
-	$contributor->add_cap('upload_files');
-}
-if ( current_user_can('contributor') && !current_user_can('upload_files') ) {
-	add_action('admin_init', 'kmw__allow_contributor_uploads');
-}
-
 
 /* ====================================
-HF10. DROPDOWN SORTING
+HF9. DROPDOWN SORTING
 --------------------------------------------------------------------- */
 // display the filter/dropdown sorting
 function kmw__sort_category_header( $taxtype ) {
@@ -167,21 +169,26 @@ function kmw__sort_categories( $taxtype ) {
 		'taxonomy'           => $taxtype,
 	);
 	$get_tax_name = get_taxonomy($taxtype);
-	$cats = get_categories( $args );
-		$output .= '<div class="grid-item">';
-			$output .= '<h4>' . $get_tax_name->label . '</h4>';
-			$output .= '<select ONCHANGE="location = this.options[this.selectedIndex].value;">';
-			foreach ( $cats as $category ) {
-				$output .= '<option value="'.  get_term_link( $category ) . '">'. $category->name . '</option>';
-			}
-			$output .= '</select>';
-		$output .= '</div>';
-	return $output;
+	$cats = get_categories( $args ); 
+	ob_start(); ?>
+		<div class="dropdown-sorter">
+			<span class="button dropdown-button">
+				<?php echo $get_tax_name->label; ?>
+				<ul>
+				<?php foreach ( $cats as $category ) { ?>
+					<li><a href="<?php echo get_term_link( $category ); ?>"><?php echo $category->name; ?></a></li>
+				<?php } ?>
+				</ul>
+			</span>
+		</div>		
+	<?php 
+	$return = ob_get_clean();
+	return $return;
 }
 
 
 /* ====================================
-HF11. RELATED POSTS BY AUTHOR
+HF10. RELATED POSTS BY AUTHOR
 --------------------------------------------------------------------- */
 if ( !function_exists( 'kmw__get_author_related' ) ) {
 	function kmw__get_author_related( $count=3) {

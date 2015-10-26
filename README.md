@@ -12,6 +12,35 @@ You should download this and use it as a mu-plugin, and modify it to suit your n
 ** CSS contains Social Icons CSS, fancy buttons CSS, and click-to-call phone number CSS
 * 4 font files total
 
+## Table of Contents
+Anything marked with * needs to be customized for your site.
+	
+### SECTION I: Helpers & Functions
+Located in ```kmw-fs/helpers-functions.php```
+
+HF1. Truncade
+HF2. *404 & Error Text
+HF3. WP E-Mail Name
+HF4. Strip WP Script Versions
+HF5. Strip WP Version
+HF6. Boot Non-Admin from WP Admin (disabled by default)
+HF7. Google Analytics
+HF8. Post Revisions
+HF9. Dropdown Sorting
+HF10. Related Posts by Author
+
+### SECTION II: Shortcodes
+Located in ```kmw-fs/shortcodes.php```
+
+SC1. Logged In & Logged Out Content
+SC2. Fancy Buttons
+SC3. *Social Media Icons
+SC4. *Google Maps
+SC5. *Phone Number
+SC6. *HTML Sitemap
+SC7. Site Info
+SC8. Current Year
+
 ## Helpers and Functions
 ### HF1. Truncate
 Shortens a longer text (for example: the excerpt, the content, a custom meta value) to a number of characters you specify.  The number is optional and defaults to 25, but you can change it to whatever you'd like. [More Information](http://stackoverflow.com/questions/9219795/truncating-text-in-php)
@@ -29,12 +58,13 @@ Useful error pages are great! I usually use this in the 404 template and sometim
 * **HF3, WordPress E-Mail Name**: Makes the WP e-mails (e.g., new user, lost PW, etc.) come from the site name instead of "WordPress." It uses ```get_bloginfo()``` to fetch the site name.
 * **HF4, Strip WordPress Script/Style Versioning**: Removes WordPress script & style versions.
 * **HF5, Strip WordPress Version**: Removes WordPress version from header.
-* **HF6, Strip Admin Bar for Non-Admin**: Removes the WP admin bar for everyone but administrator-level users. Useful for building a site with users who have no admin access.
+* **HF6, Strip Admin Bar for Non-Admin** (Default: disabled, commented out): Removes the WP admin bar for everyone but administrator-level users. Useful for building a site with users who have no admin access.
 
 ### HF6. Boot Non-Admin from WP Admin
 Redirects any URL with wp-admin for everyone but administrator-level users. Useful for building a site with users who should have no admin access.
 
-* Note: This requires edits for editor, contributor, author, and custom user roles. add: ! current_user_can( 'editor' ) and similar if you need Editors/Contributors/Authors to see WP Admin.
+* Note: Defaults to disabled. This **requires** a front-end login solution (e.g., Theme My Login). Otherwise you'll be locked out of your WordPress admin until you edit out the boot again. 
+* Note: Edits for editor, contributor, author, and custom user roles. add: ! current_user_can( 'editor' ) and similar if you need Editors/Contributors/Authors to see WP Admin.
 
 ### HF7. Google Analytics
 "Safer" than anything theme-based and even plugin-based. Because you're loading this file as a mu-plugin, it will *always* run even if you change the theme and even if you deactivate your other SEO plugins. Helps you avoid losing your precious GA data!
@@ -44,15 +74,12 @@ Redirects any URL with wp-admin for everyone but administrator-level users. Usef
 ### HF8. Post Revisions
 They can really clog your database and get unruly rather quickly, so why not define it? Set to 10 revisions.
 
-### HF9. Contributor Uploads (PERMISSIONS)
-Allow contributor uploads, simple. Contributors don't have this permission by default and it's an often-used feature. The other way to accomplish this involves installing [User Role Editor](https://wordpress.org/plugins/user-role-editor/), copy the Contributor role, and enabling it that way... *much* easier this way.
-
-### HF10. Dropdown Sorting
-Display a handy drop-down menu that forwards the visitor to their selection. You can substitute your custom taxonomy for 'category.'
+### HF9. Dropdown Sorting
+Display a handy ul/li based drop-down menu that forwards the visitor to their selection. You can subtitute your custom taxonomy for 'category.'
 
 ```<?php echo kmw__sort_category_header('category'); ?>```
 
-### HF11. Related Posts by Author
+### HF10. Related Posts by Author
 Simple list of related posts by author.
 
 ```<?php echo kmw__get_author_related(); ?>```
@@ -74,12 +101,12 @@ Buttons with a fancy title & subtitle. Use CSS to make the span smaller & block.
 * Note: Sample CSS included.
 
 ### SC3. Social Media Icons
-I usually use [Perfecticons](http://perfecticons.com/) because using theme-based social icons leaves you changing them each time you change the theme! These are flexible enough to be changed with CSS if they appear different places etc.
+Uses [Font Awesome](https://fortawesome.github.io/Font-Awesome/cheatsheet/).
 
 ```[kmw_social]```
 
-* Note: Sample CSS for "standard" Perfecticons and font files included. If you need icons other than what's listed in the default, go to [Perfecticons](http://perfecticons.com/) and generate your own.
-* Default social media networks: Twitter, Facebook, Instagram, Pinterest, Reddit, LinkedIn, SoundCloud, YouTube, Google+, RSS, E-Mail
+* Note: Sample CSS for *all* FontAwesome included.
+* Default social media networks: Twitter, Facebook, GitHub, Codepen, Instagram, Pinterest, Reddit, LinkedIn, SoundCloud, YouTube, Google+, RSS, E-Mail
 
 ### SC4. Google Maps
 Useful so you don't have to change the Google map twenty times if the code changes, etc.. Height/width can accept pixel, percentage, or whatever else you'd like.

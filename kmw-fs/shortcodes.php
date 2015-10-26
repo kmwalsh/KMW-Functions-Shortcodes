@@ -21,6 +21,7 @@ if ( ! function_exists( 'kmw__get_logged_out_content' ) ) {
 
 add_shortcode( 'logged_in', 'kmw__get_logged_in_content' );
 
+
 if ( ! function_exists( 'kmw__get_logged_in_content' ) ) {
 	function kmw__get_logged_in_content( $atts, $content = null  ) {
 		if( !is_user_logged_in() ){
@@ -54,20 +55,25 @@ add_shortcode ('kmw_social','kmw__get_social');
 
 if ( ! function_exists( 'kmw__get_social' ) ) {
 	function kmw__get_social() {
-		$soc = '<ul class="soc">
-		<li><a target="_blank" class="soc-twitter" href="#"></a></li>
-		<li><a target="_blank" class="soc-facebook" href="#"></a></li>
-		<li><a target="_blank" class="soc-linkedin" href="#"></a></li>
-		<li><a target="_blank" class="soc-pinterest" href="#"></a></li>
-		<li><a target="_blank" class="soc-youtube" href="#"></a></li>
-		<li><a target="_blank" class="soc-instagram" href="#"></a></li>
-		<li><a target="_blank" class="soc-soundcloud" href="#"></a></li>
-		<li><a target="_blank" class="soc-google" href="#"></a></li>
-		<li><a target="_blank" class="soc-reddit" href="#"></a></li>
-		<li><a target="_blank" class="soc-email1" href="#"></a></li>
-		<li><a target="_blank" class="soc-rss soc-icon-last" href="#"></a></li>
-	</ul>';
-		return $soc;
+		ob_start(); ?>
+	<ul class="soc">
+		<li title="LinkedIn"><a target="_blank" class="soc-linkedin" href="#!"><i class="fa fa-linkedin"></i></a></li>
+		<li title="CodePen"><a target="_blank" class="soc-codepen" href="#!"><i class="fa fa-codepen"></i></a></li>
+		<li title="GitHub"><a target="_blank" class="soc-github" href="#!"><i class="fa fa-github"></i></a></li>
+		<li title="Twitter"><a target="_blank" class="soc-twitter" href="#!"><i class="fa fa-twitter"></i></a></li>
+		<li title="Facebook"><a target="_blank" class="soc-facebook" href="#!"><i class="fa fa-facebook"></i></a></li>
+		<li title="Pinterest"><a target="_blank" class="soc-pinterest" href="#!"><i class="fa fa-pinterest"></i></a></li>
+		<li title="Soundcloud"><a target="_blank" class="soc-soundcloud" href="#!"><i class="fa fa-soundcloud"></i></a></li>
+		<li title="YouTube"><a target="_blank" class="soc-youtube" href="#!"><i class="fa fa-youtube"></i></a></li>
+		<li title="Google"><a target="_blank" class="soc-google" href="#!"><i class="fa fa-google"></i></a></li>
+		<li title="Instagram"><a class="soc-instagram" href="#!"><i class="fa fa-instagram"></i></a></li>
+		<li title="Reddit"><a target="_blank" class="soc-reddit" href="#!"><i class="fa fa-reddit"></i></a></li>
+		<li title="E-Mail"><a target="_blank" class="soc-email1 soc-icon-last" href="mailto:test@test.com"><i class="fa fa-envelope"></i></a></li>
+		<li title="RSS"><a target="_blank" class="soc-twitter" href="#!"><i class="fa fa-rss"></i></a></li>
+	</ul>
+	<?php
+		$return = ob_get_clean();
+		return $return;
 	}
 }
 
@@ -98,9 +104,9 @@ if ( ! function_exists( 'kmw__get_phone' ) ) {
 			'mobile' => 'false',
 		), $atts ) );
 		if ( $mobile === "true" ) {
-			return '<a id="floating-mobile-phone" href="tel:+16465684988">Call Now &mdash; (646) 568-4988</a>';
+			return '<a id="floating-mobile-phone" href="tel:+555555555">(555) 555-5555</a>';
 		} else {
-			return '<span class="desktop-phone">(646) 568-4988</span>';
+			return '<span class="desktop-phone">(555) 555-5555</span>';
 		}
 	}
 }
