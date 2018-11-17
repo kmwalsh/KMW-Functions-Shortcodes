@@ -82,7 +82,7 @@ SC3. SOCIAL MEDIA ICONS
 
 if ( ! function_exists( 'kmw_get_social' ) ) {
 
-	add_shortcode ('kmw_social','kmw_get_social');
+	add_shortcode ('kmw_social', 'kmw_get_social');
 
 	/**
 	 * Social media icons. Default social media networks: Twitter, Facebook, GitHub, Codepen, Instagram, Pinterest, Reddit, LinkedIn, SoundCloud, YouTube, RSS, E-Mail
@@ -117,7 +117,6 @@ if ( ! function_exists( 'kmw_get_social' ) ) {
 add_shortcode('kmw_googlemap', 'kmw_get_googlemap');
 
 if ( ! function_exists( 'kmw_get_googlemap' ) ) {
-
 	/**
 	 * Google maps embed code. Useful so you don't have to change the Google map twenty times if the code changes, etc.
 	 * 
@@ -127,17 +126,25 @@ if ( ! function_exists( 'kmw_get_googlemap' ) ) {
 
 	function kmw_get_googlemap($atts) {
 		extract( shortcode_atts( array(
+			// place your map in below - this map is for grand central in nyc which you probably do not want
+			'map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.422731017018!2d-73.97941808417562!3d40.752726179327475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a21fb011c85%3A0x37513b7f1821408b!2sGrand+Central+Terminal!5e0!3m2!1sen!2sus!4v1542444290363',
+			// you can also change the defaults of how the map shows up when the user/editor does not enter those atts into the shortcode
 			'width' => '100%',
 			'height' => '450px',
 		), $atts ) );
-		return '<iframe src="PLACE_GOOGLE_MAPS_EMBED" style="width: ' . $width . '; height: ' . $height . '; border:0" allowfullscreen frameborder="0"></iframe>';
+		ob_start(); ?>
+
+			<iframe class="kmw-googlemap" src="<?php echo $map; ?>" style="width: <?php echo $width; ?>; height: <?php echo $height; ?>; border:0" allowfullscreen frameborder="0"></iframe>
+
+		<?php
+		return ob_get_clean();
 	}
 }
 
 if ( ! function_exists( 'kmw_get_phone' ) ) 
 {
 
-	add_shortcode('phone', 'kmw_get_phone');
+	add_shortcode('kmw_phone', 'kmw_get_phone');
 
 	/**
 	 * Phone number shortcode: in-content or click to call for mobile. 
@@ -154,22 +161,80 @@ if ( ! function_exists( 'kmw_get_phone' ) )
 
 	function kmw_get_phone($atts) {
 		extract( shortcode_atts( array(
+			'icons' => true,
 			'mobile' => 'false',
-			'number' => 'phone',
+			'type' => 'phone',
+			'number' => null,
 		), $atts ) );
 
 		if ( $mobile === "true" ) {
-			return '<a id="floating-mobile-phone" href="tel:+555555555">(555) 555-5555</a>';
+			ob_start(); ?>
+				<span class="kmw-phone" id="floating-mobile-phone" >
+					<?php if ( $icons === true ) : ?>
+						<i class="fa fa-phone"></i> 
+					<?php endif; ?>
+					<a href="tel:+555555555">(555) 555-5555</a>
+				</span>
+			<?php
+			return ob_get_clean(); 
 		} else {
-			if ( $number === "phone" ) {
-				return '<span class="desktop-phone">(555) 555-5555</span>';
+			if ( $type === "phone" ) {
+				ob_start(); ?>
+					<span class="kmw-phone">
+						<?php if ( $icons === true ) : ?>
+							<i class="fa fa-phone"></i> 
+						<?php endif; ?>
+						<span class="desktop-phone">(555) 555-5555</span>
+					</span>
+				<?php
+				return ob_get_clean(); 
 			} 
-			if ( $number === "fax" ) {
-				return '<span class="desktop-phone">(555) 555-5555</span>';
+			if ( $type === "fax" ) {
+				ob_start(); ?>
+					<span class="kmw-phone">
+						<?php if ( $icons === true ) : ?>
+							<i class="fa fa-fax"></i>
+						<?php endif; ?>
+						<span class="desktop-phone">(555) 555-5555</span>
+					</span>
+				<?php
+				return ob_get_clean(); 
 			}
 		}
 	}
 
+}
+
+if ( ! function_exists( 'kmw_sitemap_full' ) ) {
+
+	add_shortcode('kmw_sitemap', 'kmw_sitemap_full');
+
+	/**
+	 * HTML sitemap: Categories + Pages, two column. 
+	 * HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.).
+	 * 
+	 * @example: ```[kmw_sitemap]```
+	 * 
+	 */ 
+	function kmw_sitemap_full(){
+		ob_start();
+		?>
+
+			<div class="kmw-sitemap">
+				<div class="kmw-sitemap-column">
+					<h2>Pages</h2>
+					<?php echo kmw_sitemap_pages(); ?>
+				</div>
+				<div class="kmw-sitemap-column">
+					<h2>Categories</h2>
+					<?php echo kmw_sitemap_categories(); ?>
+				</div>
+			</div>
+
+
+		<?php
+		return ob_get_clean();
+	}
 }
 
 
@@ -193,14 +258,22 @@ if ( ! function_exists( 'kmw_sitemap_categories' ) ) {
 			'title_li'           => false,
 			'echo'               => 0
 		);
-		return "<ul>".wp_list_categories($args)."</ul>";
+		ob_start(); 
+		?>
+
+			<ul class="kmw-sitemap-categories">
+				<?php echo wp_list_categories($args); ?>
+			</ul>
+
+		<?php
+		return ob_get_clean(); 
 	}
 }
 
 
 if ( ! function_exists( 'kmw_sitemap_pages' ) ) {
 
-	add_shortcode('kmw_sitemap', 'kmw_sitemap_pages');
+	add_shortcode('kmw_pages', 'kmw_sitemap_pages');
 
 	/**
 	 * HTML sitemap: Pages.
@@ -210,18 +283,20 @@ if ( ! function_exists( 'kmw_sitemap_pages' ) ) {
 	 * @param string $theme_location Note: you need to change this to the location of your primary menu.
 	 * 
 	 */ 
-	function kmw_sitemap_pages(){
-		return wp_nav_menu(array(
-		'theme_location' => 'THEME_PRIMARY_LOCATION',
+	function kmw_sitemap_pages() {
+		ob_start();
+		echo wp_nav_menu(array(
+		'theme_location' => 'primary',
 		'container' => false,
-		'menu_class' => 'menu-ul'));
+		'menu_class' => 'kmw-sitemap-ul'));
+		return ob_get_clean();
 	}
 }
 
 
 if ( ! function_exists( 'kmw_get_info' ) ) {
 
-	add_shortcode('bloginfo', 'kmw_get_info');
+	add_shortcode('kmw_bloginfo', 'kmw_get_info');
 	
 	/**
 	 * get_bloginfo() as shortcode. 

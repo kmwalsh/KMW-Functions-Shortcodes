@@ -112,40 +112,99 @@
     </function>
     <source>eJx1ktFq2zAUhq8VyDuclIEdU8cP0KxtBmsLZWyQi90MzIl17Ig6kpHkpGbk3XckO+2gFBth63xH/69fWt91+24+m8+KLJvPIINfZJ1ynrQH1NgOXlVuFStXW6zJXoHfo+ba4PdKN/xHB8p36EjypAQ6koau7Rulx9kVfKMKe0cwmD6xBK1BOXYqB7VqCdABwqHPx7ZrUB5Oqm0hw/aEg8vA9npcWNVhFajYQkNBe9R/V54ASVh5dUQfVS0Yxixsv/+crLkVPFHbuQjj0SjJtlxwFfHOUqVM7+BxAxI9LmIAcbjvsHpBFn/+8Tt/2P75L6/NJa8AFiFUdpPCAupesxujS3pl1KWQvBxOJUpZNsY0Lb0FncCSn7/zmeA31DH2pcmpK2tjPNnk+vPm5U3QFPEkBVvdSAmPkXm3Bt6AU55WESl4T+LiDj5ZNx0diWkzyjF0UDq9WBVmVzqP1qfLG7i7DR7Wizz/KM1r8yXZDVN0kOcMr11lVef5qygC8bGtMpKAj48YLt7oILweL68Q4osl31sNX4HNNOTLKmwgDYlwtbOKj2di4tSZh3OM+fwP0ejwxA==</source>
   </file>
-  <file path="kmw-fs\inc\template-functions.php" generated-path="kmw-fs.inc.template-functions.html" hash="6293c3e1834b34901fbbc3d8084aa642" package="KMW-FS\Template Functions">
+  <file path="kmw-fs\inc\template-functions.php" generated-path="kmw-fs.inc.template-functions.html" hash="ad73321e91d5ba203683c0562ebe70d4" package="KMW-FS\Template Functions">
     <docblock line="0">
-      <description>Template-related functions intended to be used in your own PHP theme templates.</description>
+      <description>Template-related functions intended to be used in your own PHP theme templates. Some of them have shortcodes, too, but they're mostly intended to be theme templates.</description>
       <long-description></long-description>
       <tag name="package" line="0" description="KMW-FS\Template Functions"/>
     </docblock>
-    <function namespace="" line="19" package="KMW-FS\Template Functions">
+    <function namespace="" line="21" package="KMW-FS\Template Functions">
       <name>kmw_none_404_help_text</name>
       <full_name>\kmw_none_404_help_text()</full_name>
-      <docblock line="19">
+      <docblock line="21">
         <description>More useful WordPress 404 &amp; error text.</description>
         <long-description>For use in the 404 template and sometimes the "none" template, depending on the site type. **MUST-CUSTOMIZE: Pay attention to the URLs -- e.g., sitemap, contact. They might be different for you and I can't guess what your page names/permalinks are.**</long-description>
-        <tag name="package" line="19" description="KMW-FS\Template Functions"/>
-        <tag name="example" line="19" description="```&lt;?php echo kmw_none_404_help_text(); ?&gt;```"/>
+        <tag name="package" line="21" description="KMW-FS\Template Functions"/>
+        <tag name="example" line="21" description="```&lt;?php echo kmw_none_404_help_text(); ?&gt;```"/>
       </docblock>
     </function>
-    <function namespace="" line="55" package="KMW-FS\Template Functions">
-      <name>kmw_truncate</name>
-      <full_name>\kmw_truncate()</full_name>
-      <docblock line="55">
+    <function namespace="" line="58" package="KMW-FS\Template Functions">
+      <name>kmw_get_truncate</name>
+      <full_name>\kmw_get_truncate()</full_name>
+      <docblock line="58">
         <description>Truncate text.</description>
         <long-description>Shortens a longer text (for example: the excerpt, the content, a custom meta value) to a number of characters you specify.  The number is optional and defaults to 25.</long-description>
-        <tag name="package" line="55" description="KMW-FS\Template Functions"/>
-        <tag name="link" line="55" description="http://stackoverflow.com/questions/9219795/truncating-text-in-php" link=":"/>
-        <tag name="example" line="55" description="```&lt;?php echo kmw_truncate(&quot;Some content here. Blah blah blah blah.&quot;, 175); ?&gt;```"/>
-        <tag name="param" line="55" description="&lt;p&gt;The text you wish to truncate.&lt;/p&gt;" type="string" variable="$text">
+        <tag name="package" line="58" description="KMW-FS\Template Functions"/>
+        <tag name="link" line="58" description="http://stackoverflow.com/questions/9219795/truncating-text-in-php" link=":"/>
+        <tag name="param" line="58" description="&lt;p&gt;The text you wish to truncate.&lt;/p&gt;" type="string" variable="$content">
           <type>string</type>
         </tag>
-        <tag name="param" line="55" description="&lt;p&gt;The number of characters where you wish to truncate.&lt;/p&gt;" type="integer" variable="$chars">
+        <tag name="param" line="58" description="&lt;p&gt;The number of characters where you wish to truncate.&lt;/p&gt;" type="integer" variable="$chars">
           <type>integer</type>
         </tag>
       </docblock>
       <argument line="0" by_reference="false">
-        <name>$text</name>
+        <name>$content</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$chars</name>
+        <default></default>
+        <type>integer</type>
+      </argument>
+    </function>
+    <function namespace="" line="79" package="KMW-FS\Template Functions">
+      <name>kmw_truncate_shortcode</name>
+      <full_name>\kmw_truncate_shortcode()</full_name>
+      <docblock line="79">
+        <description>Truncate text as a shortcode.</description>
+        <long-description></long-description>
+        <tag name="package" line="79" description="KMW-FS\Template Functions"/>
+        <tag name="uses" line="79" description="" link="kmw_get_truncate()"/>
+        <tag name="param" line="79" description="&lt;p&gt;WordPress shortcode atts.&lt;/p&gt;" type="string" variable="$atts">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="79" description="&lt;p&gt;WordPress self-closing shortcode content.&lt;/p&gt;" type="string" variable="$content">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="79" description="&lt;p&gt;Number of characters to truncate to.&lt;/p&gt;" type="integer" variable="$chars">
+          <type>integer</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$atts</name>
+        <default>null</default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$content</name>
+        <default>null</default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$chars</name>
+        <default>25</default>
+        <type>integer</type>
+      </argument>
+    </function>
+    <function namespace="" line="95" package="KMW-FS\Template Functions">
+      <name>kmw_truncate</name>
+      <full_name>\kmw_truncate()</full_name>
+      <docblock line="95">
+        <description>Truncate text as a PHP template function.</description>
+        <long-description></long-description>
+        <tag name="package" line="95" description="KMW-FS\Template Functions"/>
+        <tag name="uses" line="95" description="" link="kmw_get_truncate()"/>
+        <tag name="param" line="95" description="&lt;p&gt;Template-based content.&lt;/p&gt;" type="string" variable="$content">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="95" description="&lt;p&gt;Number of characters to truncate to.&lt;/p&gt;" type="integer" variable="$chars">
+          <type>integer</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$content</name>
         <default></default>
         <type>string</type>
       </argument>
@@ -155,15 +214,15 @@
         <type>integer</type>
       </argument>
     </function>
-    <function namespace="" line="76" package="KMW-FS\Template Functions">
+    <function namespace="" line="109" package="KMW-FS\Template Functions">
       <name>kmw_sort_categories</name>
       <full_name>\kmw_sort_categories()</full_name>
-      <docblock line="76">
+      <docblock line="109">
         <description>Faux-dropdown sorting for WordPress categories.</description>
         <long-description></long-description>
-        <tag name="package" line="76" description="KMW-FS\Template Functions"/>
-        <tag name="example" line="76" description="```&lt;?php echo kmw_sort_categories('category'); ?&gt;```"/>
-        <tag name="param" line="76" description="&lt;p&gt;The name of the WordPress taxonomy you wish to display.&lt;/p&gt;" type="string" variable="$taxtype">
+        <tag name="package" line="109" description="KMW-FS\Template Functions"/>
+        <tag name="example" line="109" description="```&lt;?php echo kmw_sort_categories('category'); ?&gt;```"/>
+        <tag name="param" line="109" description="&lt;p&gt;The name of the WordPress taxonomy you wish to display.&lt;/p&gt;" type="string" variable="$taxtype">
           <type>string</type>
         </tag>
       </docblock>
@@ -173,9 +232,9 @@
         <type>string</type>
       </argument>
     </function>
-    <source>eJyFVm1v2zYQ/uwA+Q83IZicwJLSokWR1Fa7BQtabMGCJUWBYYBCy2dLiyRqJJVEGPrfd0dKtuS1aZoqpHivzz131PxdndWHB4cH0cnJ4QGcwC2WdSEMBgr5zwrWTZWaXFYa8spgtaJXRsISodG0zCtoZaNAPlZw/eEaTIYlgumM6NDatI/3tUjvxQbh16vPweXNX70juOwdsFjEseRrmMIPW88JPuXa6Cn49+VjUskKk1enr5IMizox+GR8OKZ//x4eTOjX5jEhf1dS2RjXTQGfpVpdK9QaSBF+BFRKKmDd0Am75yW9JA1OivKwsn0mIKoVaFmiyUvU9tjjSLytxAxWWBM+ebUB6QzonBRNW2MIJydXn25ugwt6/H718c9fzuFatCAMIcopMqSs8emP3zQEAWC4CWdWvxT1DFJZGZGaEG4zbKHMN5nhCqzy9RoVWYA1RU51sFF+hFRUvoFNwwk/ZsK4EtUMfiUo/KhGVYoir+41CIVhD5l7vscnQSnhOdzd3c2ZH4BpJuHr4E+P38K7mCStcgRcv0lfuW/q2GpN5DLRRii2wdt3MUcwma/yB0gLofXCY5WAdL2YT/j/ZE713DsNCuKHE6HzIo/nAjKF64X3t3gQOlV5bc4zkpGqDTdyGrw49uJb1cJGcrWWREwQFp9wHol4HpGJnbGLDOmcq7M1G3WViby4W7EelyfXVBVNhGgJWuC4QK5BFIU1r8M92x9QrJz/jgA7F15cCiIiq7FxR0BGC8SGDvYt7RQ7spCBC7ciTlsL1FbMkQqpbwk/ik1UKTpDbGZnjLHRKFSaET7nO0/zqCncym0tOTZoEiecEA1LRwhbyIgq6VZWkFdHZfsgVC6WBcICiACsnRYoqo4ECk2jKhjI8esvTCv7+M50MIpeUzduZ8JwJNx2h8POv8mkoia01ZLVBt1YgCl31LYRuDL4lKKqzcxuGGPquxlppQ3xqgSaDAIeRNHgMddSQNWUS7JG1U8zoagMqLTFX9eY5us2BO7mXox4I2tORxS20itci6Ywmm29fD2aUu+5cc8hM6Y+jyIqYnovH1CtC/kYprKM/qG+t/M0Onv54uzN2euoA4VqGXByQV4Fdup/r9t7MKfeDU2+PmnIaOaE8HMhMliOHqE3gxdvXo8mAs99JUqiruJeO7LocuJ2wXg85jqz9O+8hSM9unTgiBHUQ7jGqD5yRM/ZcrPp/6Npm6ANa9Y7WhDk3YhislHoBVZO5hjiTqoTmLiMFi6z0APv7ei1bpak3zk4nXW6z8rQWtVSd3sf/OM9+c5VGIbO2Zdh4/DZuGWebRhN9E8Yg41UOeqv9s2laJ6ClZL1iq951uBScofsLtadiTFZn6HXnuup361b/3kGiSe+Ux0d6DpjMnBP7mIhCVnJsh1RohvL4be4sB/NzlGPx+RIqA2zQygl2qktiU+xUU/40P0sYjiduRMKB9Wy3R51xz7H7A9lRhJO5qebi15Em7bAr4jw3dLLZPkKE/oOMQNvg0hMbgpMitzfM9Gru6by911UTVH0FjpE9yz0EFkpJqlFiUc6HSS2OAvotlZ/iKql7hEhrjuhEfgWauKBszn4UrCXi7t+Bh8KPTsDLiMqr5eZzHUtql5q2RhD5d4Ku33/5TAZ8HOURBAXYolFf6+5j5CxEjUDijSjRnMZCW0Xls5MoJ3q+LYeuLQe6cMs4fk+HaqzYy8eRtefBTHHx+d7Hy5dWF8GIW/vbloyKFsY7TU9cbvBTd0NlGdvaffXFd4NnP8AXlCcQw==</source>
+    <source>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</source>
   </file>
-  <file path="kmw-functions-shortcodes.php" generated-path="kmw-functions-shortcodes.html" hash="f24a724b954bba74ad8d6f8c270ffee3" package="KMW-FS">
+  <file path="kmw-functions-shortcodes.php" generated-path="kmw-functions-shortcodes.html" hash="af2a9f9d635578ee66ea8bc7b12526af" package="KMW-FS">
     <docblock line="0">
       <description>Plugin Name: KMW Functions &amp; Shortcodes
 Plugin URI: https://github.com/kmwalsh/KMW-Functions-Shortcodes
@@ -194,30 +253,33 @@ Version: 2.0.0</long-description>
         <tag name="package" line="28" description="KMW-FS"/>
       </docblock>
     </function>
-    <source>eJyVVNtu00AQfY4l/8PwQi6KvYXHgARItFIFRYWozaO1bMaxE3u93QshQv13ZteukxTSghwlyuw5M+fMzPrtO1WoOGKTSRzBBK4rtyolfOE1zuDT1QIunBS2bKSBlzAvGm1Fs0RziL35djmDwlplZoytSlu476loarapt7wyBaMsSZ8leZTjIxqhS+XPZjBvagRnMHcVCGdsU0P+QJyC6ZlTEI20KC3kja65taVcQV5WFjWdcbmERaOX1xqNAVEhl4lTzG6Rb0waqn5wlpKRwRSuUlh4mQfxvSMytOEWWyPeVEDdUpmg93V6lp6FUPh6r7jY8BVCcDz3MRZHcaTxzpUas0YKHA2pLUluWCkF61wkrYukc5DSQIbjN0/wlBdgApVLXu1sKf6Bte/f81jyrCpynvT9f56zpZ4r3/Mk9Px/CGE2PcE/ZQ4jeNGPP8OfZNiMwPOz3GTt1pghjOn5FUcD+vDlMuMBTritylDeOXTYY6d/YYdyg7D9AxrheUuBDhB2ydhdhcavGtiiNKDC2qeBwGjygweRcJx91ArzygaMdTRY8x+8Bfg4qdS48rPUHa21SC1K9rJbqsmcrvpjtjasRaQ1qVl7XJZdXH4+zzIY0y3Qmu8Ivf7qUO+GPjR85feVcFaTRW89CDhu05/1O+SxDUFXq23M4yw+eJDE/z1lgZIwrlRKv0fqjyvmdEuAb9HQ2+FEMQ9JOshTxQ5xoW2nK9/H0f1vsXGpZg==</source>
+    <source>eJyVVF1v00AQfHak/IflhSRV7Cs8BiRAopUqKCpEkMfTcVnHTuzz9T4IEep/Z+/sOkkhLchKouzN7O7M7vn1G13o4YCdnQ0HcAY3lV+VCj6JGmfw4XoBl15JVzbKwnOYF41xslmiPcR+/XI1g8I5bWeMrUpX+O+ZbGq2qbeisgWjLGmfJX2Q4z1aaUodzmYwb2oEbzH3FUhvXVNDfk+cgu2ZU5CNcqgc5I2phXOlWkFeVg4NnQm1hEVjljcGrQVZoVCp18xtUWxsFqu+846SkcAMrjNYhDYP4ntFJGgjHLZCgqiI+kZlYr8vs/PsPIbi11st5EasEKLieYix4WA4MHjrS4O8URLHI7IlzS0rlWSdirRVkXYKMhrIaPLqEZ4ODdhIFUpUO1fKf2Dt/XsaS5p1RcrT3v+nOVvyXAfP0+j5/xDibHpCeMocxvCsHz/HnyTYjiHweW55uzV2BBN6fgVGIpZLLiKaYFvNUd169NhDp38hx2pJXP6EJnjRUqADxFWyblehDZsGrigt6Lj1WSQwGnxy3yMcZx/HvpIkfBjraLAWP0QLCHHq0uAqjNJ0tFYhOZTu226plntT9cdsbVmLyGrqZh1wnF9efbzgHCZ0CYwRO0KvP3s0u1EIjV6EdSWcMyQxSI8NHNv0Z/0OeSxD0s1qjXmYJQQPkoS/pyRQEia0zuj3qPvjijldEhBbtPRyOFEsQNIO8lixQ1y07XTlu+Hg7jeuP6ld</source>
   </file>
-  <file path="kmw-fs\inc\shortcodes.php" generated-path="kmw-fs.inc.shortcodes.html" hash="3cd13392ab87b1cf028db3bfbae9139f" package="KMW-FS\Shortcodes">
+  <file path="kmw-fs\inc\shortcodes.php" generated-path="kmw-fs.inc.shortcodes.html" hash="5969651201fc84ccaa74b4e31d6f9e69" package="KMW-FS\Shortcodes">
     <docblock line="0">
       <description>Custom WordPress shortcodes for things such as logged in/out content, the current year, social media icons, etc.</description>
       <long-description></long-description>
       <tag name="package" line="0" description="KMW-FS\Shortcodes"/>
     </docblock>
-    <function namespace="" line="20" package="KMW-FS\Shortcodes">
+    <function namespace="" line="21" package="KMW-FS\Shortcodes">
       <name>kmw_get_logged_out_content</name>
       <full_name>\kmw_get_logged_out_content()</full_name>
-      <docblock line="20">
+      <docblock line="21">
         <description>WordPress shortcode with start and end tags. Produces text visible only to Logged Out users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.</description>
         <long-description></long-description>
-        <tag name="package" line="20" description="KMW-FS\Shortcodes"/>
-        <tag name="example" line="20" description="```[logged_out]stuff only logged out users see[/logged_out]```"/>
-        <tag name="param" line="20" description="&lt;p&gt;The content you want only logged out users to see.&lt;/p&gt;" type="string" variable="$content">
+        <tag name="package" line="21" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="21" description="```[logged_out]stuff only logged out users see[/logged_out]```"/>
+        <tag name="param" line="21" description="&lt;p&gt;WordPress shortcode atts. Empty.&lt;/p&gt;" type="array" variable="$atts">
+          <type>array</type>
+        </tag>
+        <tag name="param" line="21" description="&lt;p&gt;The content you want only logged out users to see.&lt;/p&gt;" type="string" variable="$content">
           <type>string</type>
         </tag>
       </docblock>
       <argument line="0" by_reference="false">
         <name>$atts</name>
         <default></default>
-        <type/>
+        <type>array</type>
       </argument>
       <argument line="0" by_reference="false">
         <name>$content</name>
@@ -225,22 +287,25 @@ Version: 2.0.0</long-description>
         <type>string</type>
       </argument>
     </function>
-    <function namespace="" line="43" package="KMW-FS\Shortcodes">
+    <function namespace="" line="45" package="KMW-FS\Shortcodes">
       <name>kmw_get_logged_in_content</name>
       <full_name>\kmw_get_logged_in_content()</full_name>
-      <docblock line="43">
+      <docblock line="45">
         <description>WordPress shortcode with start and end tags. Produces text visible only to Logged In users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.</description>
         <long-description></long-description>
-        <tag name="package" line="43" description="KMW-FS\Shortcodes"/>
-        <tag name="example" line="43" description="```[logged_in]stuff only logged in users see[/logged_in]```"/>
-        <tag name="param" line="43" description="&lt;p&gt;The content you want only logged in users to see. Accepts shortcodes.&lt;/p&gt;" type="string" variable="$content">
+        <tag name="package" line="45" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="45" description="```[logged_in]stuff only logged in users see[/logged_in]```"/>
+        <tag name="param" line="45" description="&lt;p&gt;WordPress shortcode atts. Empty.&lt;/p&gt;" type="array" variable="$atts">
+          <type>array</type>
+        </tag>
+        <tag name="param" line="45" description="&lt;p&gt;The content you want only logged in users to see. Accepts shortcodes.&lt;/p&gt;" type="string" variable="$content">
           <type>string</type>
         </tag>
       </docblock>
       <argument line="0" by_reference="false">
         <name>$atts</name>
         <default></default>
-        <type/>
+        <type>array</type>
       </argument>
       <argument line="0" by_reference="false">
         <name>$content</name>
@@ -248,18 +313,18 @@ Version: 2.0.0</long-description>
         <type>string</type>
       </argument>
     </function>
-    <function namespace="" line="67" package="KMW-FS\Shortcodes">
+    <function namespace="" line="69" package="KMW-FS\Shortcodes">
       <name>kmw_get_button</name>
       <full_name>\kmw_get_button()</full_name>
-      <docblock line="67">
+      <docblock line="69">
         <description>WordPress shortcode with start and end tags. Produces buttons with optional subtitle.</description>
         <long-description></long-description>
-        <tag name="package" line="67" description="KMW-FS\Shortcodes"/>
-        <tag name="example" line="67" description="```[button link=&quot;#!&quot; target=&quot;_self, _blank&quot; subtitle=&quot;&quot;]Primary[/button]```"/>
-        <tag name="param" line="67" description="&lt;p&gt;WordPress shortcode attributes. Contains three arguments. &lt;code&gt;$link&lt;/code&gt;, where you want the button to go. &lt;code&gt;$target&lt;/code&gt;, whether you want the button to open in a new window, use _blank or _new. And finally &lt;code&gt;$subtitle&lt;/code&gt;, the smaller text contained within the button.&lt;/p&gt;" type="array" variable="$atts">
+        <tag name="package" line="69" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="69" description="```[button link=&quot;#!&quot; target=&quot;_self, _blank&quot; subtitle=&quot;&quot;]Primary[/button]```"/>
+        <tag name="param" line="69" description="&lt;p&gt;WordPress shortcode attributes. Contains three arguments. &lt;code&gt;$link&lt;/code&gt;, where you want the button to go. &lt;code&gt;$target&lt;/code&gt;, whether you want the button to open in a new window, use _blank or _new. And finally &lt;code&gt;$subtitle&lt;/code&gt;, the smaller text contained within the button.&lt;/p&gt;" type="array" variable="$atts">
           <type>array</type>
         </tag>
-        <tag name="param" line="67" description="&lt;p&gt;The content you want in the button. Accepts shortcodes.&lt;/p&gt;" type="string" variable="$content">
+        <tag name="param" line="69" description="&lt;p&gt;The content you want in the button. Accepts shortcodes.&lt;/p&gt;" type="string" variable="$content">
           <type>string</type>
         </tag>
       </docblock>
@@ -274,26 +339,26 @@ Version: 2.0.0</long-description>
         <type>string</type>
       </argument>
     </function>
-    <function namespace="" line="91" package="KMW-FS\Shortcodes">
+    <function namespace="" line="93" package="KMW-FS\Shortcodes">
       <name>kmw_get_social</name>
       <full_name>\kmw_get_social()</full_name>
-      <docblock line="91">
+      <docblock line="93">
         <description>Social media icons. Default social media networks: Twitter, Facebook, GitHub, Codepen, Instagram, Pinterest, Reddit, LinkedIn, SoundCloud, YouTube, RSS, E-Mail</description>
         <long-description></long-description>
-        <tag name="package" line="91" description="KMW-FS\Shortcodes"/>
-        <tag name="example" line="91" description="```[kmw_social]```"/>
-        <tag name="link" line="91" description="https://fontawesome.com/" link=":"/>
+        <tag name="package" line="93" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="93" description="```[kmw_social]```"/>
+        <tag name="link" line="93" description="https://fontawesome.com/" link=":"/>
       </docblock>
     </function>
-    <function namespace="" line="126" package="KMW-FS\Shortcodes">
+    <function namespace="" line="127" package="KMW-FS\Shortcodes">
       <name>kmw_get_googlemap</name>
       <full_name>\kmw_get_googlemap()</full_name>
-      <docblock line="126">
+      <docblock line="127">
         <description>Google maps embed code. Useful so you don't have to change the Google map twenty times if the code changes, etc.</description>
         <long-description></long-description>
-        <tag name="package" line="126" description="KMW-FS\Shortcodes"/>
-        <tag name="example" line="126" description="```[kmw_googlemap height=&quot;&quot; width=&quot;&quot;]```"/>
-        <tag name="param" line="126" description="&lt;p&gt;WordPress shortcode attributes &lt;code&gt;$width&lt;/code&gt; and &lt;code&gt;$height&lt;/code&gt; for the map. Can accept pixel, percentage, or whatever else you'd like.&lt;/p&gt;" type="array" variable="$atts">
+        <tag name="package" line="127" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="127" description="```[kmw_googlemap height=&quot;&quot; width=&quot;&quot;]```"/>
+        <tag name="param" line="127" description="&lt;p&gt;WordPress shortcode attributes &lt;code&gt;$width&lt;/code&gt; and &lt;code&gt;$height&lt;/code&gt; for the map. Can accept pixel, percentage, or whatever else you'd like.&lt;/p&gt;" type="array" variable="$atts">
           <type>array</type>
         </tag>
       </docblock>
@@ -303,19 +368,19 @@ Version: 2.0.0</long-description>
         <type>array</type>
       </argument>
     </function>
-    <function namespace="" line="153" package="KMW-FS\Shortcodes">
+    <function namespace="" line="162" package="KMW-FS\Shortcodes">
       <name>kmw_get_phone</name>
       <full_name>\kmw_get_phone()</full_name>
-      <docblock line="153">
+      <docblock line="162">
         <description>Phone number shortcode: in-content or click to call for mobile.</description>
         <long-description>Desktop or click-to-call for mobile Again, useful so you don't have to change it twenty times if the phone number changes (which it can -- call forwarding/tracking services are a great reason to make use of this code). **Note: You should *only* include the mobile number *once*.**</long-description>
-        <tag name="package" line="153" description="KMW-FS\Shortcodes"/>
-        <tag name="example" line="153" description="```[kmw_get_phone mobile=&quot;true or false&quot;]```"/>
-        <tag name="param" line="153" description="&lt;p&gt;WordPress shortcode atttributes. &lt;code&gt;mobile&lt;/code&gt; Whether this instance is the floating phone number that only appears for mobile browsers. &lt;code&gt;number&lt;/code&gt; The number type. Default types are phone or fax.&lt;/p&gt;" type="string" variable="$atts">
+        <tag name="package" line="162" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="162" description="```[kmw_get_phone mobile=&quot;true or false&quot;]```"/>
+        <tag name="param" line="162" description="&lt;p&gt;WordPress shortcode atttributes. &lt;code&gt;mobile&lt;/code&gt; Whether this instance is the floating phone number that only appears for mobile browsers. &lt;code&gt;number&lt;/code&gt; The number type. Default types are phone or fax.&lt;/p&gt;" type="string" variable="$atts">
           <type>string</type>
         </tag>
-        <tag name="link" line="153" description="http://katemwalsh.com/fixed-position-click-to-call-mobile-phone-number-code/" link=":"/>
-        <tag name="todo" line="153" description="Support any phone number input here through shortcode and regex or something to clean non numerics and then reformat number for consistent display."/>
+        <tag name="link" line="162" description="http://katemwalsh.com/fixed-position-click-to-call-mobile-phone-number-code/" link=":"/>
+        <tag name="todo" line="162" description="Support any phone number input here through shortcode and regex or something to clean non numerics and then reformat number for consistent display."/>
       </docblock>
       <argument line="0" by_reference="false">
         <name>$atts</name>
@@ -323,68 +388,72 @@ Version: 2.0.0</long-description>
         <type>string</type>
       </argument>
     </function>
-    <function namespace="" line="185" package="KMW-FS\Shortcodes">
-      <name>kmw_sitemap_categories</name>
-      <full_name>\kmw_sitemap_categories()</full_name>
-      <docblock line="185">
-        <description>HTML sitemap: Categories.</description>
-        <long-description>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). ```[kmw_categories]``` simply fetches a list of your blog categories.</long-description>
-        <tag name="package" line="185" description="KMW-FS\Shortcodes"/>
-        <tag name="example" line="185" description="```[kmw_categories]```"/>
+    <function namespace="" line="219" package="KMW-FS\Shortcodes">
+      <name>kmw_sitemap_full</name>
+      <full_name>\kmw_sitemap_full()</full_name>
+      <docblock line="219">
+        <description>HTML sitemap: Categories + Pages, two column.</description>
+        <long-description>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.).</long-description>
+        <tag name="package" line="219" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="219" description="```[kmw_sitemap]```"/>
       </docblock>
-    </function>
-    <function namespace="" line="211" package="KMW-FS\Shortcodes">
-      <name>kmw_sitemap_pages</name>
-      <full_name>\kmw_sitemap_pages()</full_name>
-      <docblock line="211">
-        <description>HTML sitemap: Pages.</description>
-        <long-description>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). This function duplicates the primary menu since you might have "off-menu" pages you don't want to display. If you want a straight list of all pages regardless of the menu, you'll want [wp_list_pages()](http://codex.wordpress.org/Function_Reference/wp_list_pages).</long-description>
-        <tag name="package" line="211" description="KMW-FS\Shortcodes"/>
-        <tag name="example" line="211" description="```[kmw_sitemap]```"/>
-        <tag name="param" line="211" description="&lt;p&gt;Note: you need to change this to the location of your primary menu.&lt;/p&gt;" type="string" variable="$theme_location">
-          <type>string</type>
-        </tag>
-      </docblock>
-    </function>
-    <function namespace="" line="233" package="KMW-FS\Shortcodes">
-      <name>kmw_get_info</name>
-      <full_name>\kmw_get_info()</full_name>
-      <docblock line="233">
-        <description>get_bloginfo() as shortcode.</description>
-        <long-description>Uses ```get_bloginfo()``` to return data about the website. See [get_bloginfo() on the Codex](https://codex.wordpress.org/Function_Reference/get_bloginfo) for a full list of what can be returned with the key. Useful for placing the site's name in content. If your site rebrands later, you won't need to change the name in a million places *or* mess with MySQL replacements.</long-description>
-        <tag name="package" line="233" description="KMW-FS\Shortcodes"/>
-        <tag name="link" line="233" description="https://codex.wordpress.org/Function_Reference/get_bloginfo" link=":"/>
-        <tag name="example" line="233" description="```[site_info key=&quot;name&quot;]```"/>
-        <tag name="param" line="233" description="&lt;p&gt;WordPress shortcode attributes. Contains &lt;code&gt;key&lt;/code&gt;, the key of the &lt;code&gt;get_bloginfo()&lt;/code&gt; key you wish to return.&lt;/p&gt;" type="string" variable="$atts">
-          <type>string</type>
-        </tag>
-      </docblock>
-      <argument line="0" by_reference="false">
-        <name>$atts</name>
-        <default></default>
-        <type>string</type>
-      </argument>
     </function>
     <function namespace="" line="252" package="KMW-FS\Shortcodes">
+      <name>kmw_sitemap_categories</name>
+      <full_name>\kmw_sitemap_categories()</full_name>
+      <docblock line="252">
+        <description>HTML sitemap: Categories.</description>
+        <long-description>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). ```[kmw_categories]``` simply fetches a list of your blog categories.</long-description>
+        <tag name="package" line="252" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="252" description="```[kmw_categories]```"/>
+      </docblock>
+    </function>
+    <function namespace="" line="286" package="KMW-FS\Shortcodes">
+      <name>kmw_sitemap_pages</name>
+      <full_name>\kmw_sitemap_pages()</full_name>
+      <docblock line="286">
+        <description>HTML sitemap: Pages.</description>
+        <long-description>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). This function duplicates the primary menu since you might have "off-menu" pages you don't want to display. If you want a straight list of all pages regardless of the menu, you'll want [wp_list_pages()](http://codex.wordpress.org/Function_Reference/wp_list_pages).</long-description>
+        <tag name="package" line="286" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="286" description="```[kmw_sitemap]```"/>
+        <tag name="param" line="286" description="&lt;p&gt;Note: you need to change this to the location of your primary menu.&lt;/p&gt;" type="string" variable="$theme_location">
+          <type>string</type>
+        </tag>
+      </docblock>
+    </function>
+    <function namespace="" line="308" package="KMW-FS\Shortcodes">
+      <name>kmw_get_info</name>
+      <full_name>\kmw_get_info()</full_name>
+      <docblock line="308">
+        <description>get_bloginfo() as shortcode.</description>
+        <long-description>Uses ```get_bloginfo()``` to return data about the website. See [get_bloginfo() on the Codex](https://codex.wordpress.org/Function_Reference/get_bloginfo) for a full list of what can be returned with the key. Useful for placing the site's name in content. If your site rebrands later, you won't need to change the name in a million places *or* mess with MySQL replacements.</long-description>
+        <tag name="package" line="308" description="KMW-FS\Shortcodes"/>
+        <tag name="link" line="308" description="https://codex.wordpress.org/Function_Reference/get_bloginfo" link=":"/>
+        <tag name="example" line="308" description="```[site_info key=&quot;name&quot;]```"/>
+        <tag name="param" line="308" description="&lt;p&gt;WordPress shortcode attributes. Contains &lt;code&gt;key&lt;/code&gt;, the key of the &lt;code&gt;get_bloginfo()&lt;/code&gt; key you wish to return.&lt;/p&gt;" type="string" variable="$atts">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$atts</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="327" package="KMW-FS\Shortcodes">
       <name>kmw_get_year</name>
       <full_name>\kmw_get_year()</full_name>
-      <docblock line="252">
+      <docblock line="327">
         <description>Current year as shortcode. Just uses PHP to fetch the current year. Possibly useful for copyright notices, freshening content, etc.</description>
         <long-description></long-description>
-        <tag name="package" line="252" description="KMW-FS\Shortcodes"/>
-        <tag name="example" line="252" description="```[kmw_year]```"/>
+        <tag name="package" line="327" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="327" description="```[kmw_year]```"/>
       </docblock>
     </function>
     <markers>
-      <todo line="153">Support any phone number input here through shortcode and regex or something to clean non numerics and then reformat number for consistent display.</todo>
+      <todo line="162">Support any phone number input here through shortcode and regex or something to clean non numerics and then reformat number for consistent display.</todo>
     </markers>
-    <parse_markers>
-      <error line="20" code="PPC:ERR-50014">Name of argument $atts does not match with the DocBlock's name $content in \kmw_get_logged_out_content()</error>
-      <error line="20" code="PPC:ERR-50015">Argument $content is missing from the Docblock of kmw_get_logged_out_content</error>
-      <error line="43" code="PPC:ERR-50014">Name of argument $atts does not match with the DocBlock's name $content in \kmw_get_logged_in_content()</error>
-      <error line="43" code="PPC:ERR-50015">Argument $content is missing from the Docblock of kmw_get_logged_in_content</error>
-    </parse_markers>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="kmw-fs\inc\wordpress-tweak.php" generated-path="kmw-fs.inc.wordpress-tweak.html" hash="76601e6121f539c304b8b2a6a6984ca2" package="KMW-FS\WordPress Tweaks">
     <docblock line="0">

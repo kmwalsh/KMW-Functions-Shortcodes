@@ -16,3 +16,5 @@
  * This is a loader file for me when I work on developing the plugin. Because there is no WP-friendly plugin loader file in the index and everything is in the dist/ folder, this is easier for me when I clone the repo to work on changes. You don't need this file to run the plugin in production environments.
  */
 include('dist/kmw-functions-shortcodes.php');
+include('qa/create-page.php');
+include('qa/create-template.php');

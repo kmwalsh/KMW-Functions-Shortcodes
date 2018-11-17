@@ -78,6 +78,7 @@ if ( ! function_exists( 'kmw_remove_wp_author_date_archives' ) ) {
 
 }
 
+
 if ( ! function_exists( 'kmw_remove_tags_categories' ) ) {
 
 	// Uncomment the line below to enable this functionality
@@ -95,6 +96,7 @@ if ( ! function_exists( 'kmw_remove_tags_categories' ) ) {
 
 }
 
+
 if ( ! function_exists( 'kmw_remove_thumbnail_support' ) ) {
 
 	// Uncomment the line below to enable this functionality
@@ -110,6 +112,7 @@ if ( ! function_exists( 'kmw_remove_thumbnail_support' ) ) {
 	}
 
 }
+
 
 if ( ! function_exists( 'kmw_remove_version' ) ) {
 	
@@ -128,6 +131,7 @@ if ( ! function_exists( 'kmw_remove_version' ) ) {
 	}
 }
 
+
 if ( ! function_exists( 'kmw_remove_admin_bar' ) ) {
 
 	add_action('after_setup_theme', 'kmw_remove_admin_bar');
@@ -145,6 +149,7 @@ if ( ! function_exists( 'kmw_remove_admin_bar' ) ) {
 
 }
 
+
 if ( ! function_exists( 'kmw_remove_wp_login_logo' ) ) {
 
 	add_action( 'login_enqueue_scripts', 'kmw_remove_wp_login_logo' );
@@ -155,7 +160,7 @@ if ( ! function_exists( 'kmw_remove_wp_login_logo' ) ) {
 	function kmw_remove_wp_login_logo() { ?>
 		<style type="text/css">
 			.login h1 a {
-				background-image: none;
+				background-image: none !important;
 				display: none;
 				padding-bottom: 30px;
 			}
@@ -163,7 +168,6 @@ if ( ! function_exists( 'kmw_remove_wp_login_logo' ) ) {
 	<?php }
   
 	}
-	
   
   
   if ( ! function_exists( 'kmw_remove_dashboard_meta' ) ) {
@@ -198,6 +202,7 @@ if ( ! function_exists( 'kmw_remove_wp_login_logo' ) ) {
 	
 		# rocketgenius widget for Gravity Forms
 		# remove_meta_box( 'rg_forms_dashboard', 'dashboard', 'side' );
+
 	}
   
 }
@@ -229,7 +234,7 @@ if ( ! function_exists( 'kmw_custom_dashboard_widget' ) ) {
 		<div id="custom-id" class="welcome-panel" style="display: none;">
 		<div class="welcome-panel-content">
 			<h2>Welcome to <?php echo get_bloginfo('name'); ?>!</h2>
-			<p class="about-description">Your site is running on <b>WordPress</b>.</p>
+			<p class="about-description">Your site is running on <b>WordPress</b> (<?php echo get_bloginfo('version'); ?>).</p>
 			<div class="welcome-panel-column-container">
 			<div class="welcome-panel-column">
 				<h3>Get Started</h3>
@@ -300,6 +305,7 @@ if ( ! function_exists( 'kmw_admin_bar_remove' ) ) {
 
 }
 
+
 if ( ! function_exists( 'kmw_footer_remove_wp_version' ) ) {
 
 	add_action( 'admin_menu', 'kmw_footer_remove_wp_version' );
@@ -312,6 +318,7 @@ if ( ! function_exists( 'kmw_footer_remove_wp_version' ) ) {
 	}
 
 }
+
 
 if ( ! function_exists( 'kmw_wp_admin_footer_remove_thanks' ) ) {
 

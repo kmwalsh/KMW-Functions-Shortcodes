@@ -1,0 +1,63 @@
+.kmw-sc
+{
+    display: inline-block;
+    padding: 10px;
+    min-width: 200px;    
+    max-width: 200px;
+
+    border: 1px solid #CC0052;
+    border-radius: 2px;
+    
+    background: #ff0066;
+    color: white;
+
+    a {
+        color: white;
+    }
+}
+
+.kmw-sc-dropdown
+{
+    display: none;
+}
+
+.kmw-sc-header
+{
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.kmw-sc-caret
+{
+    margin-left: auto;
+    font-size: 22px;
+}
+
+.kmw-sc-list
+{
+    margin: 0;
+    padding: 0;
+}
+
+.kmw-sc-item
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    font-size: 14px;
+    padding: 5px 0;
+    margin: 5px 0;
+    border-bottom: 1px solid #CC0052;
+    
+    &:last-child
+    {
+        border-bottom: 0;
+    }
+}

@@ -1,27 +1,44 @@
 /**
- * Uses IDs because this should only show up exactly once on your site.
+ * General phone
+ */
+.kmw-phone
+{
+    i.fa
+    {
+        margin-right: 5px;
+    }
+}
+
+ /**
+ * Floating mobile phone
  */
 
-a#floating-mobile-phone 
+//Uses IDs because this should only show up exactly once on your site.
+#floating-mobile-phone 
 { 
     display:none; 
 }
 
-@media only screen and (max-width:600px) 
+@media only screen and (max-width:768px) 
 {
 
-    a#floating-mobile-phone
+    #floating-mobile-phone
     {
         /*theming-related: colors, fonts, sizing, etc. edit at will*/
         background-color: #000;
-        color: #fff;
         text-align: center;
         font-size: 18px;
+        padding: 7px 0;
+        color: #fff;
+
+        a {
+            color: #fff;
+        }
         
         /*positioning-related: don't edit unless you're css-confident*/
         display: block;
         position: fixed;
-        top: 0;
+        bottom: 0;
         left: 0;
         width: 100%;
         z-index: 9999;

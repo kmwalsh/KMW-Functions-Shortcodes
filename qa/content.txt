@@ -1,0 +1,63 @@
+<b style="color: red;">WARNING, this plugin is in developer mode.</b> If you are seeing this "developer mode" warning in your WP admin panel, you have installed too much stuff. The <b>DIST</b> folder should be the only thing copied into your WordPress admin. It won't kill you to use the plugin this way or anything, but you're adding a lot of extra "gunk" into your WordPress admin. Including this un-deleteable page.
+
+<h2>Other Tests to Run</h2>
+<ul>
+ 	<li>Google Analytics: View source on the page, CTRL+F for "Google Analytics added by KMW-FS"</li>
+ 	<li>Emojis: Do they work? :)</li>
+</ul>
+
+<hr />
+
+<h2>Testing for Trademark and Registration -- kmw_format_the_content();</h2>
+<b>Test Description:</b> All trademarks and registration marks should show up the same in the content below.
+
+Lorem ipsum dolor™ sit amet, consectetur adipiscing elit"<sup>®</sup>. Quisque vulputate risus vel tincidunt tempor. Sed quis scelerisque® nibh, vitae luctus quam. Phasellus sodales elit sed pharetra bibendum. Aliquam a diam eleifend, luctus lorem eget, dignissim mi.™ Vestibulum egestas, eros eget cursus sodales, dui magna ornare nisi, nec® tempor tellus nunc tempus enim. Nullam nulla augue, ullamcorper™ eget purus id®, rhoncus pretium nibh. Suspendisse lobortis molestie arcu\u2122 a faucibus. Pellentesque fringilla velit\u2122 odio, non suscipit™ libero aliquam efficitur. In hac habitasse platea dictumst. Quisque aliquet condimentum enim, ac tincidunt quam ullamcorper at. Praesent sem nunc, tristique vitae suscipit eget®, efficitur nec metus. Nam rhoncus<sup>®</sup> ut leo a ultrices. Sed porttitor mi\u00AE dignissim, sodales™ lectus vel®, euismod turpis. Nulla<sup>™</sup> sit amet erat est.
+<h2>Shortcode Testing</h2>
+<h3>Social Media Icons</h3>
+<b>Test Description:</b> The social media shortcode should show below.
+[kmw_social]
+<h3>Logged In and Out Content</h3>
+<b>Test Description:</b> There are two shortcodes with text below. They are visible, alternately, when logged in and out. View this page when logged into your WordPress, and when logged out of your WordPress.
+
+[logged_out]stuff only logged out users see[/logged_out][logged_in]stuff only logged in users see[/logged_in]
+<h3>Button</h3>
+<b>Test Description:</b> The button should show below.
+
+[button link="#!" target="_self" subtitle="A Nice Little Button"]Primary Button[/button]
+<h3>Google Maps</h3>
+<b>Test Description:</b> The Google map should show below.
+
+[kmw_googlemap]
+<h3>Phone Number</h3>
+<b>Test Description:</b> The phone number should show below: both fax and phone. Additionally, if you resize your browser below 768px, you should see the floating mobile phone number attached to the bottom of the page.
+
+<em>With Icons:</em> Fax: [kmw_phone number="fax"] Phone: [kmw_phone number="phone"]
+<em>Without Icons:</em> Fax: [kmw_phone number="fax" icons="false"] Phone: [kmw_phone number="phone" icons="false"]
+<em>Floating Mobile:</em> (should be blank on desktop; if you see a number here, there's a CSS problem) [kmw_phone mobile="true" number="phone"]
+<h3>Sitemap</h3>
+<h4>Full Sitemap</h4>
+[kmw_sitemap]
+<h4>Just Categories</h4>
+[kmw_categories]
+<h4>Just Pages</h4>
+[kmw_pages]
+<h3>Bloginfo</h3>
+<b>Test Description:</b> The site name should show below.
+
+[kmw_bloginfo key="name"]
+<h3>Year</h3>
+<b>Test Description:</b> The current year should show below.
+
+[kmw_year]
+
+<hr />
+
+<h2>Template Function Testing</h2>
+<h3>Help Text</h3>
+<b>Test Description:</b> The help text should show below.
+
+[kmw_help_text]
+<h3>Truncate Text</h3>
+<b>Test Description:</b> The long Lorem Ipsum paragraph should be truncated.
+
+[kmw_truncate]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec felis non justo imperdiet scelerisque. Curabitur ac pretium ante. Maecenas id sem non enim mattis finibus. Ut bibendum dolor non condimentum dictum. Sed vel leo ex. Praesent ornare, nisl vitae mattis aliquet, tortor felis lobortis turpis, sed consequat leo massa eu lorem. Sed in tortor imperdiet, tempor risus congue, rutrum enim. Duis accumsan blandit viverra. Aliquam lobortis, enim nec accumsan tincidunt, augue urna volutpat neque, in pellentesque ligula ipsum ac diam. Sed semper vulputate interdum. Integer quis quam turpis. Etiam vitae sem eu erat mattis posuere id eget ex. Ut nisi urna, interdum a posuere nec, mollis nec est. Nunc non dignissim ligula, vel molestie neque. [/kmw_truncate]

@@ -6,6 +6,7 @@
  * @package KMW-FS\WordPress Clean-Up
  */
 
+
 /**
 * disable emojis
 * http://wordpress.stackexchange.com/a/185578
@@ -14,7 +15,7 @@
 if ( ! function_exists( 'kmw_disable_wp_emojicons' ) ) 
 {
 
-    add_action( 'init', 'kmw_disable_wp_emojicons' );
+    add_action( 'init', 'kmw_disable_wp_emojicons', 10 );
 	/**
 	 * Disable WP Emojis
 	 */ 
@@ -32,13 +33,12 @@ if ( ! function_exists( 'kmw_disable_wp_emojicons' ) )
 
         // filter to remove TinyMCE emojis
         add_filter( 'tiny_mce_plugins', 'kmw_disable_emojicons_tinymce' );
+
+        // prevent Wordpress from automatically converting your old school ASCII smilies to Unicode emojis (like ;-) to 😉)
+        // https://wordpress.stackexchange.com/a/269983
+        remove_filter('the_content', 'convert_smilies');
     }
 
-}
-
-
-if ( ! function_exists( 'kmw_disable_emojicons_tinymce' ) ) 
-{
 	/**
 	 * Disable WP Emojis in TinyMCE Editor
 	 */ 
@@ -51,6 +51,7 @@ if ( ! function_exists( 'kmw_disable_emojicons_tinymce' ) )
             return array();
         }
     }
+
 
 }
 
@@ -74,6 +75,7 @@ if ( ! function_exists( 'kmw_remove_wp_ver_css_js' ) )
     
 }
 
+
 if ( ! function_exists( 'kmw_remove_wp_version' ) ) 
 {
 
@@ -86,6 +88,23 @@ if ( ! function_exists( 'kmw_remove_wp_version' ) )
 		return '';
 	}
 }
+
+/**
+ * Remove Windows Live Manifest in header.
+ */
+remove_action( 'wp_head', 'wlwmanifest_link');
+
+/**
+ * Remove RSD link in header.
+ */
+remove_action ('wp_head', 'rsd_link');
+
+/**
+ * Remove Shortlink in header.
+ */
+remove_action( 'wp_head', 'wp_shortlink_wp_head');
+
+
 
 if ( ! function_exists( 'kmw_remove_admin_bar' ) ) 
 {
