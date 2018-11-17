@@ -1,0 +1,113 @@
+<?php
+
+/**
+ * Template-related functions intended to be used in your own PHP theme templates.
+ * 
+ * @package KMW-FS\Template Functions
+ */
+
+if ( ! function_exists( 'kmw_none_404_help_text' ) ) {
+	
+	/**
+	 * More useful WordPress 404 & error text.
+	 * 
+	 * For use in the 404 template and sometimes the "none" template, depending on the site type. **MUST-CUSTOMIZE: Pay attention to the URLs -- e.g., sitemap, contact. They might be different for you and I can't guess what your page names/permalinks are.**
+	 * 
+	 * @example: ```<?php echo kmw_none_404_help_text(); ?>```
+	 */ 
+
+	function kmw_none_404_help_text() {
+		ob_start();
+		?> 
+		<div class="help-404">
+		
+			<ul class="help-404-list">
+				<li><a href="javascript:history.go(-1)">Try going back a page.</a></li>
+				<li>Check the <a href="/sitemap/">sitemap</a>. This displays a list of all pages.</li>
+				<li>Head back to the <a href="/">main page</a> and start again.</li>
+				<li><a href="/contact/">Contact us</a> if you need assistance.</li>				
+				<li>Try searching:</li>
+			</ul>
+			
+			<?php get_search_form(); ?>
+		</div>
+		<?php 
+		$myvariable = ob_get_clean();
+		return $myvariable;
+	}
+
+}
+
+
+if ( ! function_exists( 'kmw_truncate' ) ) {
+
+	/**
+	 * Truncate text.
+	 * Shortens a longer text (for example: the excerpt, the content, a custom meta value) to a number of characters you specify.  The number is optional and defaults to 25.
+	 * 
+	 * @link: http://stackoverflow.com/questions/9219795/truncating-text-in-php
+	 * @example: ```<?php echo kmw_truncate("Some content here. Blah blah blah blah.", 175); ?>```
+	 * @param string $text The text you wish to truncate.
+	 * @param int $chars The number of characters where you wish to truncate.
+	 * 
+	 */
+
+	function kmw_truncate($text, $chars = 25) {
+		if (strlen($text) > $chars) {
+			$text = $text." ";
+			$text = substr($text,0,$chars);
+			$text = substr($text,0,strrpos($text,' '));
+			$text = $text."...";
+		}
+		return $text;
+	}
+
+}
+
+if ( ! function_exists( 'kmw_sort_categories' ) ) {
+
+	/**
+	 * Faux-dropdown sorting for WordPress categories.
+	 * 
+	 * @example: ```<?php echo kmw_sort_categories('category'); ?>```
+	 * @param string $taxtype The name of the WordPress taxonomy you wish to display.
+	 */
+
+	function kmw_sort_categories( $taxtype ) {
+
+		$args = array(
+			'parent'        => 0,
+			'orderby'            => 'name',
+			'order'              => 'ASC',
+			'style'              => 'list',
+			'hide_empty'         => 0,
+			'title_li'           => '',
+			'number'             => null,
+			'taxonomy'           => $taxtype,
+		);
+
+		$get_tax_name = get_taxonomy( $taxtype );
+		$cats = get_categories( $args ); 
+
+		ob_start(); ?>
+
+			<div class="dropdown-sorter">
+
+				<span class="button dropdown-button">
+					<?php echo $get_tax_name->label; ?>
+					<ul>
+					<?php foreach ( $cats as $category ) { ?>
+						<li><a href="<?php echo get_term_link( $category ); ?>"><?php echo $category->name; ?></a></li>
+					<?php } ?>
+					</ul>
+				</span>
+
+			</div>	
+
+		<?php 
+		$return = ob_get_clean();
+		return $return;
+
+	}
+
+}

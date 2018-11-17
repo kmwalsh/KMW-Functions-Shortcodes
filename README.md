@@ -13,7 +13,7 @@ Helpers, functions, and shortcodes I typically use in my WordPress installations
 
 You can use it (almost) exactly as-is by copying the `dist` folder into your WordPress `wp-content/mu-plugins` folder.
 
-If you want to use the Sass, Gulp, etc. stuff (probably best if you wanted to make greater modifications): `npm install`
+If you want to use the Sass, Gulp, etc. stuff (probably best if you wanted to make greater modifications): `npm install` and then `gulp` to recompile the assets.
 
 You can also modify/rebuild the documentation if you really want. It is built with [phpDoc](https://www.phpdoc.org/). I used the Composer version.
 

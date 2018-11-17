@@ -12,6 +12,9 @@
     "devDependencies": {
         "font-awesome": "^4.7.0",
         "gulp": "^3.9.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.4",
         "node-sass": "^4.10.0"
     }
 }
