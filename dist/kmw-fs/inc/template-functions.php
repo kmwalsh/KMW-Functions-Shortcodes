@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * Template-related functions intended to be used in your own PHP theme templates.
+ * 
  * @package KMW-FS\Template Functions
  */
 
@@ -46,7 +48,7 @@ if ( ! function_exists( 'kmw_truncate' ) ) {
 	 * @link: http://stackoverflow.com/questions/9219795/truncating-text-in-php
 	 * @example: ```<?php echo kmw_truncate("Some content here. Blah blah blah blah.", 175); ?>```
 	 * @param string $text The text you wish to truncate.
-	 * @param number $chars The number of characters where you wish to truncate.
+	 * @param int $chars The number of characters where you wish to truncate.
 	 * 
 	 */
 

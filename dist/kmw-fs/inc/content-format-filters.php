@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * Content formatting filters such as trademark and registration mark.
+ * 
  * @package KMW-FS\Content Formatting
  */
 

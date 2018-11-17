@@ -1,244 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-    <meta charset="utf-8"/>
-    <title>KMW WordPress Functions and Shortcodes</title>
-    <meta name="author" content=""/>
-    <meta name="description" content=""/>
-
-    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/prism.css" rel="stylesheet" media="all"/>
-    <link href="../css/template.css" rel="stylesheet" media="all"/>
-    
-    <!--[if lt IE 9]>
-    <script src="../js/html5.js"></script>
-    <![endif]-->
-    <script src="../js/jquery-1.11.0.min.js"></script>
-    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.smooth-scroll.js"></script>
-    <script src="../js/prism.min.js"></script>
-    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
-        <script type="text/javascript">
-        function loadExternalCodeSnippets() {
-            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-                var src = pre.getAttribute('data-src');
-                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-                var language = 'php';
-
-                var code = document.createElement('code');
-                code.className = 'language-' + language;
-
-                pre.textContent = '';
-
-                code.textContent = 'Loading…';
-
-                pre.appendChild(code);
-
-                var xhr = new XMLHttpRequest();
-
-                xhr.open('GET', src, true);
-
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4) {
-
-                        if (xhr.status < 400 && xhr.responseText) {
-                            code.textContent = xhr.responseText;
-
-                            Prism.highlightElement(code);
-                        }
-                        else if (xhr.status >= 400) {
-                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-                        }
-                        else {
-                            code.textContent = '✖ Error: File does not exist or is empty';
-                        }
-                    }
-                };
-
-                xhr.send(null);
-            });
-        }
-
-        $(document).ready(function(){
-            loadExternalCodeSnippets();
-        });
-        $('#source-view').on('shown', function () {
-            loadExternalCodeSnippets();
-        })
-    </script>
-
-    <link rel="shortcut icon" href="../images/favicon.ico"/>
-    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
-</head>
-<body>
-
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <i class="icon-ellipsis-vertical"></i>
-            </a>
-            <a class="brand" href="../index.html">KMW WordPress Functions and Shortcodes</a>
-
-            <div class="nav-collapse">
-                <ul class="nav pull-right">
-                                        <li class="dropdown" id="charts-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Charts <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../graphs/class.html">
-                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown" id="reports-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Reports <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">7</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/deprecated.html">
-                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--<div class="go_to_top">-->
-    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
-    <!--</div>-->
-</div>
-
-<div id="___" class="container-fluid">
-        <section class="row-fluid">
-        <div class="span2 sidebar">
-                                <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
-            </div>
-            <div id="namespace-733786997" class="accordion-body collapse in">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
-                                                                                            </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        </div>
-    </section>
-    <section class="row-fluid">
-        <div class="span10 offset2">
-            <div class="row-fluid">
-                <div class="span8 content file">
-                    <nav>
-                                                                    </nav>
-
-                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
-                    <h1><small></small>shortcodes.php</h1>
-                    <p><em></em></p>
-                    
-
-                    
-                    
-                                    </div>
-
-                <aside class="span4 detailsbar">
-                    <dl>
-                                                    <dt>Package</dt>
-                            <dd><div class="namespace-wrapper">\Default</div></dd>
-                        
-                        
-                    </dl>
-                    <h2>Tags</h2>
-                    <table class="table table-condensed">
-                                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                                            </table>
-
-                </aside>
-            </div>
-
-            
-            
-        </div>
-    </section>
-
-    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="source-view-label"></h3>
-        </div>
-        <div class="modal-body">
-            <pre data-src="../files/kmw-fs\inc\shortcodes.php.txt" class="language-php line-numbers"></pre>
-        </div>
-    </div>
-
-    <footer class="row-fluid">
-        <section class="span10 offset2">
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <section class="row-fluid footer-sections">
-                        <section class="span4">
-                                                        <h1><i class="icon-code"></i></h1>
-                            <div>
-                                <ul>
-                                                                    </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-bar-chart"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-pushpin"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../reports/errors.html">Errors</a></li>
-                                    <li><a href="../reports/markers.html">Markers</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </section>
-                </section>
-            </section>
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <hr />
-                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on November 17th, 2018 at 06:55.
-                </section>
-            </section>
-        </section>
-    </footer>
-</div>
-
-</body>
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>KMW WordPress Functions and Shortcodes</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="../css/template.css" type="text/css"></link><script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="../js/jquery.tools.min.js"></script><script type="text/javascript" src="../js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="../js/template.js"></script></head><body><div id="content"><h1 class="file">kmw-fs\inc\shortcodes.php<a href="../source/kmw-fs\inc\shortcodes.php.html"><img src="../images/icons/view_source.png" alt="View Source" border="0"></img></a></h1><div id="file-nav-box"><div id="file-nav-options">
+              Show:
+              <img src="../images/icons/visibility_public.png" alt="Public" id="show-public"></img><img src="../images/icons/visibility_protected.png" alt="Protected" id="show-protected"></img><img src="../images/icons/visibility_private.png" alt="Private" id="show-private"></img><span class="attribute" id="show-inherited">inherited</span></div><div id="file-nav-container"><ul id="file-nav"></ul><div style="clear: left;"></div></div><div id="file-nav-tab">
+              Table of Contents
+          </div></div><a name="top" class="anchor"></a><div id="file-description"><div xmlns:php="http://php.net/xsl" class="short-description">Custom WordPress shortcodes for things such as logged in/out content, the current year, social media icons, etc.</div><div xmlns:php="http://php.net/xsl" class="long-description"></div></div><dl class="file-info"><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd></dl><a name="functions" class="anchor"></a><h2>Functions</h2><div><a id="::kmw_get_button()" class="anchor"></a><div class="function "><a href="#" class="gripper"><img src="../images/icons/arrow_right.png"></img><img src="../images/icons/arrow_down.png" style="display: none;"></img></a><code class="title"><img src="../images/icons/function.png" alt="function" title="function"></img><span class="highlight">kmw_get_button</span><span class="nb-faded-text">(array $atts, string $content = null)</span> : void</code><div class="description"><p class="short_description">WordPress shortcode with start and end tags. Produces buttons with optional subtitle.</p></div><div class="code-tabs"><div xmlns:php="http://php.net/xsl" class="long-description"></div><strong>Parameters</strong><table class="argument-info"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tr><th>$atts</th><td>array</td><td><em><p>WordPress shortcode attributes. Contains three arguments. <code>$link</code>, where you want the button to go. <code>$target</code>, whether you want the button to open in a new window, use _blank or _new. And finally <code>$subtitle</code>, the smaller text contained within the button.</p></em></td></tr><tr><th>$content</th><td>string</td><td><em><p>The content you want in the button. Accepts shortcodes.</p></em></td></tr></table><strong>Details</strong><dl class="function-info"><dt xmlns:php="http://php.net/xsl">Example</dt><dd xmlns:php="http://php.net/xsl">```[button link="#!" target="_self, _blank" subtitle=""]Primary[/button]```
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd></dl></div><div class="clear"></div></div><a id="::kmw_get_googlemap()" class="anchor"></a><div class="function "><a href="#" class="gripper"><img src="../images/icons/arrow_right.png"></img><img src="../images/icons/arrow_down.png" style="display: none;"></img></a><code class="title"><img src="../images/icons/function.png" alt="function" title="function"></img><span class="highlight">kmw_get_googlemap</span><span class="nb-faded-text">(array $atts)</span> : void</code><div class="description"><p class="short_description">Google maps embed code. Useful so you don't have to change the Google map twenty times if the code changes, etc.</p></div><div class="code-tabs"><div xmlns:php="http://php.net/xsl" class="long-description"></div><strong>Parameters</strong><table class="argument-info"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tr><th>$atts</th><td>array</td><td><em><p>WordPress shortcode attributes <code>$width</code> and <code>$height</code> for the map. Can accept pixel, percentage, or whatever else you'd like.</p></em></td></tr></table><strong>Details</strong><dl class="function-info"><dt xmlns:php="http://php.net/xsl">Example</dt><dd xmlns:php="http://php.net/xsl">```[kmw_googlemap height="" width=""]```
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd></dl></div><div class="clear"></div></div><a id="::kmw_get_info()" class="anchor"></a><div class="function "><a href="#" class="gripper"><img src="../images/icons/arrow_right.png"></img><img src="../images/icons/arrow_down.png" style="display: none;"></img></a><code class="title"><img src="../images/icons/function.png" alt="function" title="function"></img><span class="highlight">kmw_get_info</span><span class="nb-faded-text">(string $atts)</span> : void</code><div class="description"><p class="short_description">get_bloginfo() as shortcode.</p></div><div class="code-tabs"><div xmlns:php="http://php.net/xsl" class="long-description"><p>Uses <code>get_bloginfo()</code> to return data about the website. See <a href="https://codex.wordpress.org/Function_Reference/get_bloginfo">get_bloginfo() on the Codex</a> for a full list of what can be returned with the key. Useful for placing the site's name in content. If your site rebrands later, you won't need to change the name in a million places <em>or</em> mess with MySQL replacements.</p></div><strong>Parameters</strong><table class="argument-info"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tr><th>$atts</th><td>string</td><td><em><p>WordPress shortcode attributes. Contains <code>key</code>, the key of the <code>get_bloginfo()</code> key you wish to return.</p></em></td></tr></table><strong>Details</strong><dl class="function-info"><dt xmlns:php="http://php.net/xsl">Example</dt><dd xmlns:php="http://php.net/xsl">```[site_info key="name"]```
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Link</dt><dd xmlns:php="http://php.net/xsl"><a href=":">https://codex.wordpress.org/Function_Reference/get_bloginfo</a>
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd></dl></div><div class="clear"></div></div><a id="::kmw_get_logged_in_content()" class="anchor"></a><div class="function "><a href="#" class="gripper"><img src="../images/icons/arrow_right.png"></img><img src="../images/icons/arrow_down.png" style="display: none;"></img></a><code class="title"><img src="../images/icons/function.png" alt="function" title="function"></img><span class="highlight">kmw_get_logged_in_content</span><span class="nb-faded-text">(string $content = null)</span> : void</code><div class="description"><p class="short_description">WordPress shortcode with start and end tags. Produces text visible only to Logged In users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.</p></div><div class="code-tabs"><div xmlns:php="http://php.net/xsl" class="long-description"></div><strong>Parameters</strong><table class="argument-info"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tr><th>$content</th><td>string</td><td><em><p>The content you want only logged in users to see. Accepts shortcodes.</p></em></td></tr></table><strong>Details</strong><dl class="function-info"><dt xmlns:php="http://php.net/xsl">Example</dt><dd xmlns:php="http://php.net/xsl">```[logged_in]stuff only logged in users see[/logged_in]```
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd></dl></div><div class="clear"></div></div><a id="::kmw_get_logged_out_content()" class="anchor"></a><div class="function "><a href="#" class="gripper"><img src="../images/icons/arrow_right.png"></img><img src="../images/icons/arrow_down.png" style="display: none;"></img></a><code class="title"><img src="../images/icons/function.png" alt="function" title="function"></img><span class="highlight">kmw_get_logged_out_content</span><span class="nb-faded-text">(string $content = null)</span> : void</code><div class="description"><p class="short_description">WordPress shortcode with start and end tags. Produces text visible only to Logged Out users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.</p></div><div class="code-tabs"><div xmlns:php="http://php.net/xsl" class="long-description"></div><strong>Parameters</strong><table class="argument-info"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tr><th>$content</th><td>string</td><td><em><p>The content you want only logged out users to see.</p></em></td></tr></table><strong>Details</strong><dl class="function-info"><dt xmlns:php="http://php.net/xsl">Example</dt><dd xmlns:php="http://php.net/xsl">```[logged_out]stuff only logged out users see[/logged_out]```
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd></dl></div><div class="clear"></div></div><a id="::kmw_get_phone()" class="anchor"></a><div class="function "><a href="#" class="gripper"><img src="../images/icons/arrow_right.png"></img><img src="../images/icons/arrow_down.png" style="display: none;"></img></a><code class="title"><img src="../images/icons/function.png" alt="function" title="function"></img><span class="highlight">kmw_get_phone</span><span class="nb-faded-text">(string $atts)</span> : void</code><div class="description"><p class="short_description">Phone number shortcode: in-content or click to call for mobile.</p></div><div class="code-tabs"><div xmlns:php="http://php.net/xsl" class="long-description"><p>Desktop or click-to-call for mobile Again, useful so you don't have to change it twenty times if the phone number changes (which it can -- call forwarding/tracking services are a great reason to make use of this code). <strong>Note: You should <em>only</em> include the mobile number <em>once</em>.</strong></p></div><strong>Parameters</strong><table class="argument-info"><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tr><th>$atts</th><td>string</td><td><em><p>WordPress shortcode atttributes. <code>mobile</code> Whether this instance is the floating phone number that only appears for mobile browsers. <code>number</code> The number type. Default types are phone or fax.</p></em></td></tr></table><strong>Details</strong><dl class="function-info"><dt xmlns:php="http://php.net/xsl">Example</dt><dd xmlns:php="http://php.net/xsl">```[kmw_get_phone mobile="true or false"]```
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Link</dt><dd xmlns:php="http://php.net/xsl"><a href=":">http://katemwalsh.com/fixed-position-click-to-call-mobile-phone-number-code/</a>
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Todo</dt><dd xmlns:php="http://php.net/xsl">Support any phone number input here through shortcode and regex or something to clean non numerics and then reformat number for consistent display.
+         
+    </dd></dl></div><div class="clear"></div></div><a id="::kmw_get_social()" class="anchor"></a><div class="function "><a href="#" class="gripper"><img src="../images/icons/arrow_right.png"></img><img src="../images/icons/arrow_down.png" style="display: none;"></img></a><code class="title"><img src="../images/icons/function.png" alt="function" title="function"></img><span class="highlight">kmw_get_social</span><span class="nb-faded-text">()</span> : void</code><div class="description"><p class="short_description">Social media icons. Default social media networks: Twitter, Facebook, GitHub, Codepen, Instagram, Pinterest, Reddit, LinkedIn, SoundCloud, YouTube, RSS, E-Mail</p></div><div class="code-tabs"><div xmlns:php="http://php.net/xsl" class="long-description"></div><strong>Details</strong><dl class="function-info"><dt xmlns:php="http://php.net/xsl">Example</dt><dd xmlns:php="http://php.net/xsl">```[kmw_social]```
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Link</dt><dd xmlns:php="http://php.net/xsl"><a href=":">https://fontawesome.com/</a>
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd></dl></div><div class="clear"></div></div><a id="::kmw_get_year()" class="anchor"></a><div class="function "><a href="#" class="gripper"><img src="../images/icons/arrow_right.png"></img><img src="../images/icons/arrow_down.png" style="display: none;"></img></a><code class="title"><img src="../images/icons/function.png" alt="function" title="function"></img><span class="highlight">kmw_get_year</span><span class="nb-faded-text">()</span> : void</code><div class="description"><p class="short_description">Current year as shortcode. Just uses PHP to fetch the current year. Possibly useful for copyright notices, freshening content, etc.</p></div><div class="code-tabs"><div xmlns:php="http://php.net/xsl" class="long-description"></div><strong>Details</strong><dl class="function-info"><dt xmlns:php="http://php.net/xsl">Example</dt><dd xmlns:php="http://php.net/xsl">```[kmw_year]```
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd></dl></div><div class="clear"></div></div><a id="::kmw_sitemap_categories()" class="anchor"></a><div class="function "><a href="#" class="gripper"><img src="../images/icons/arrow_right.png"></img><img src="../images/icons/arrow_down.png" style="display: none;"></img></a><code class="title"><img src="../images/icons/function.png" alt="function" title="function"></img><span class="highlight">kmw_sitemap_categories</span><span class="nb-faded-text">()</span> : void</code><div class="description"><p class="short_description">HTML sitemap: Categories.</p></div><div class="code-tabs"><div xmlns:php="http://php.net/xsl" class="long-description"><p>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). <code>[kmw_categories]</code> simply fetches a list of your blog categories.</p></div><strong>Details</strong><dl class="function-info"><dt xmlns:php="http://php.net/xsl">Example</dt><dd xmlns:php="http://php.net/xsl">```[kmw_categories]```
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd></dl></div><div class="clear"></div></div><a id="::kmw_sitemap_pages()" class="anchor"></a><div class="function "><a href="#" class="gripper"><img src="../images/icons/arrow_right.png"></img><img src="../images/icons/arrow_down.png" style="display: none;"></img></a><code class="title"><img src="../images/icons/function.png" alt="function" title="function"></img><span class="highlight">kmw_sitemap_pages</span><span class="nb-faded-text">()</span> : void</code><div class="description"><p class="short_description">HTML sitemap: Pages.</p></div><div class="code-tabs"><div xmlns:php="http://php.net/xsl" class="long-description"><p>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). This function duplicates the primary menu since you might have &quot;off-menu&quot; pages you don't want to display. If you want a straight list of all pages regardless of the menu, you'll want <a href="http://codex.wordpress.org/Function_Reference/wp_list_pages">wp_list_pages()</a>.</p></div><strong>Details</strong><dl class="function-info"><dt xmlns:php="http://php.net/xsl">Example</dt><dd xmlns:php="http://php.net/xsl">```[kmw_sitemap]```
+         
+    </dd><dt xmlns:php="http://php.net/xsl">Package</dt><dd xmlns:php="http://php.net/xsl">KMW-FS\Shortcodes
+         
+    </dd></dl></div><div class="clear"></div></div></div></div><small class="footer">
+            Documentation was generated by
+            <a href="http://phpdoc.org">phpDocumentor
+                2.8.5</a>.
+        </small></body></html>

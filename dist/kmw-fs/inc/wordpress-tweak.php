@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * WordPress tweaks such as the email from name, search results per page, removal of archives, etc.
+ * 
  * @package KMW-FS\WordPress Tweaks
  */
 

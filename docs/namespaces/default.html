@@ -3,177 +3,1565 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>KMW WordPress Functions and Shortcodes</title>
+    <title>     &raquo; \
+</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
 
-    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/prism.css" rel="stylesheet" media="all"/>
-    <link href="../css/template.css" rel="stylesheet" media="all"/>
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
     
-    <!--[if lt IE 9]>
-    <script src="../js/html5.js"></script>
-    <![endif]-->
-    <script src="../js/jquery-1.11.0.min.js"></script>
-    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.smooth-scroll.js"></script>
-    <script src="../js/prism.min.js"></script>
-    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+            <!--[if lt IE 9]>
+        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
     
-    <link rel="shortcut icon" href="../images/favicon.ico"/>
-    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
-    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
-</head>
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
 <body>
 
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <i class="icon-ellipsis-vertical"></i>
-            </a>
-            <a class="brand" href="../index.html">KMW WordPress Functions and Shortcodes</a>
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">KMW WordPress Functions and Shortcodes</a>
 
-            <div class="nav-collapse">
-                <ul class="nav pull-right">
-                                        <li class="dropdown" id="charts-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Charts <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../graphs/class.html">
-                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown" id="reports-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Reports <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">7</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/markers.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../reports/deprecated.html">
-                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--<div class="go_to_top">-->
-    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
-    <!--</div>-->
-</div>
-
-<div id="___" class="container-fluid">
-        <section class="row-fluid">
-        <div class="span2 sidebar">
-                                <div class="accordion" style="margin-bottom: 0">
-        <div class="accordion-group">
-            <div class="accordion-heading">
-                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
-            </div>
-            <div id="namespace-1742330337" class="accordion-body collapse in">
-                <div class="accordion-inner">
-
-                    
-                    <ul>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
                                                                                             </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Namespaces
+                </li>
+                <a href="../namespaces/default.html" title="\">
+                    <i class="icon-th"></i> \
+                </a>
+                <ul class="nav nav-list nav-namespaces">
+                        
+    
+                </ul>
+            </ul>
+        </div>
+
+        <div class="span8 namespace-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../namespaces/default.html">\</a>
+    </li>
+
+        </ul>
+
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-function"></i> Functions</h3>
+                                        <div id="function_kmw_add_googleanalytics" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_add_googleanalytics .collapse">
+        <h1>kmw_add_googleanalytics<a href="../namespaces/default.html#function_kmw_add_googleanalytics">¶</a></h1>
+        <p class="short_description">Add Google Analytics to site.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Persistent Analytics</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_add_googleanalytics" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_admin_bar_remove" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_admin_bar_remove .collapse">
+        <h1>kmw_admin_bar_remove<a href="../namespaces/default.html#function_kmw_admin_bar_remove">¶</a></h1>
+        <p class="short_description">Remove WP icon in upper right corner of WP admin bar.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_admin_bar_remove" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_blockusers_init" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_blockusers_init .collapse">
+        <h1>kmw_blockusers_init<a href="../namespaces/default.html#function_kmw_blockusers_init">¶</a></h1>
+        <p class="short_description">Boot non-admin from wp-admin.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Redirects any URL with wp-admin for everyone but administrator-level users. Useful for building a site with users who should have no admin access. Defaults to disabled. This <strong>requires a front-end login solution</strong> (e.g., Theme My Login). Otherwise you'll be locked out of your WordPress admin until you edit out the boot again.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_blockusers_init" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_custom_dashboard_widget" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_custom_dashboard_widget .collapse">
+        <h1>kmw_custom_dashboard_widget<a href="../namespaces/default.html#function_kmw_custom_dashboard_widget">¶</a></h1>
+        <p class="short_description">Custom welcome widget.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Adds hidden content to admin_footer, then shows with jQuery, and inserts after welcome panel.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    author
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Ren Ventura <EngageWP.com></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    link
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><a href="http://www.engagewp.com/how-to-create-full-width-dashboard-widget-wordpress">http://www.engagewp.com/how-to-create-full-width-dashboard-widget-wordpress</a></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_custom_dashboard_widget" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_disable_emojicons_tinymce" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_disable_emojicons_tinymce .collapse">
+        <h1>kmw_disable_emojicons_tinymce<a href="../namespaces/default.html#function_kmw_disable_emojicons_tinymce">¶</a></h1>
+        <p class="short_description">Disable WP Emojis in TinyMCE Editor</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Clean-Up</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$plugins</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_disable_emojicons_tinymce" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_disable_wp_emojicons" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_disable_wp_emojicons .collapse">
+        <h1>kmw_disable_wp_emojicons<a href="../namespaces/default.html#function_kmw_disable_wp_emojicons">¶</a></h1>
+        <p class="short_description">Disable WP Emojis</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Clean-Up</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_disable_wp_emojicons" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_edit_text" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_edit_text .collapse">
+        <h1>kmw_edit_text<a href="../namespaces/default.html#function_kmw_edit_text">¶</a></h1>
+        <p class="short_description">Replace &quot;Thank you&quot; in lower left corner of WP Admin with custom text (default blank).</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$content</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_edit_text" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_footer_remove_wp_version" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_footer_remove_wp_version .collapse">
+        <h1>kmw_footer_remove_wp_version<a href="../namespaces/default.html#function_kmw_footer_remove_wp_version">¶</a></h1>
+        <p class="short_description">Remove WP version in lower right corner of WP Admin.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_footer_remove_wp_version" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_format_the_content" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_format_the_content .collapse">
+        <h1>kmw_format_the_content<a href="../namespaces/default.html#function_kmw_format_the_content">¶</a></h1>
+        <p class="short_description">Standardize trademark and registration marks.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Please remember that people are generally very varied. There will be a myriad different way people can enter different content different ways on a site. These were useful in one specific instance for me, but maybe your client decided to wrap every registration mark with a span and custom inline styling (sorry for ya). These content formatting filters can (and <em>should</em>) only go so far. If you wind up with many dozens of lines in this file, something is going wrong in the content pipeline, and you may want to attempt to address that through your organization, client, whoever you're working for.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Content Formatting</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$content</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_format_the_content" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_fs_scripts" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_fs_scripts .collapse">
+        <h1>kmw_fs_scripts<a href="../namespaces/default.html#function_kmw_fs_scripts">¶</a></h1>
+        <p class="short_description">Enqueue scripts and styles for this plugin.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_fs_scripts" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_get_button" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_get_button .collapse">
+        <h1>kmw_get_button<a href="../namespaces/default.html#function_kmw_get_button">¶</a></h1>
+        <p class="short_description">WordPress shortcode with start and end tags. Produces buttons with optional subtitle.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Shortcodes</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>[button link="#!" target="_self, _blank" subtitle=""]Primary[/button]</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$atts</h4>
+                                                <code>array</code><p><p>WordPress shortcode attributes. Contains three arguments. <code>$link</code>, where you want the button to go. <code>$target</code>, whether you want the button to open in a new window, use _blank or _new. And finally <code>$subtitle</code>, the smaller text contained within the button.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$content</h4>
+                                                <code>string</code><p><p>The content you want in the button. Accepts shortcodes.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_get_button" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_get_googlemap" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_get_googlemap .collapse">
+        <h1>kmw_get_googlemap<a href="../namespaces/default.html#function_kmw_get_googlemap">¶</a></h1>
+        <p class="short_description">Google maps embed code. Useful so you don&#039;t have to change the Google map twenty times if the code changes, etc.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Shortcodes</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>[kmw_googlemap height="" width=""]</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$atts</h4>
+                                                <code>array</code><p><p>WordPress shortcode attributes <code>$width</code> and <code>$height</code> for the map. Can accept pixel, percentage, or whatever else you'd like.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_get_googlemap" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_get_info" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_get_info .collapse">
+        <h1>kmw_get_info<a href="../namespaces/default.html#function_kmw_get_info">¶</a></h1>
+        <p class="short_description">get_bloginfo() as shortcode.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Uses <code>get_bloginfo()</code> to return data about the website. See <a href="https://codex.wordpress.org/Function_Reference/get_bloginfo">get_bloginfo() on the Codex</a> for a full list of what can be returned with the key. Useful for placing the site's name in content. If your site rebrands later, you won't need to change the name in a million places <em>or</em> mess with MySQL replacements.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Shortcodes</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    link
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><a href="https://codex.wordpress.org/Function_Reference/get_bloginfo">https://codex.wordpress.org/Function_Reference/get_bloginfo</a></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>[site_info key="name"]</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$atts</h4>
+                                                <code>string</code><p><p>WordPress shortcode attributes. Contains <code>key</code>, the key of the <code>get_bloginfo()</code> key you wish to return.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_get_info" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_get_logged_in_content" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_get_logged_in_content .collapse">
+        <h1>kmw_get_logged_in_content<a href="../namespaces/default.html#function_kmw_get_logged_in_content">¶</a></h1>
+        <p class="short_description">WordPress shortcode with start and end tags. Produces text visible only to Logged In users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for &quot;calls to action&quot; and other very simple stuff.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Shortcodes</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>[logged_in]stuff only logged in users see[/logged_in]</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$content</h4>
+                                                <code>string</code><p><p>The content you want only logged in users to see. Accepts shortcodes.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_get_logged_in_content" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_get_logged_out_content" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_get_logged_out_content .collapse">
+        <h1>kmw_get_logged_out_content<a href="../namespaces/default.html#function_kmw_get_logged_out_content">¶</a></h1>
+        <p class="short_description">WordPress shortcode with start and end tags. Produces text visible only to Logged Out users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for &quot;calls to action&quot; and other very simple stuff.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Shortcodes</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>[logged_out]stuff only logged out users see[/logged_out]</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$content</h4>
+                                                <code>string</code><p><p>The content you want only logged out users to see.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_get_logged_out_content" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_get_phone" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_get_phone .collapse">
+        <h1>kmw_get_phone<a href="../namespaces/default.html#function_kmw_get_phone">¶</a></h1>
+        <p class="short_description">Phone number shortcode: in-content or click to call for mobile.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Desktop or click-to-call for mobile Again, useful so you don't have to change it twenty times if the phone number changes (which it can -- call forwarding/tracking services are a great reason to make use of this code). <strong>Note: You should <em>only</em> include the mobile number <em>once</em>.</strong></p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Shortcodes</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>[kmw_get_phone mobile="true or false"]</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    link
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><a href="http://katemwalsh.com/fixed-position-click-to-call-mobile-phone-number-code/">http://katemwalsh.com/fixed-position-click-to-call-mobile-phone-number-code/</a></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    todo
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Support any phone number input here through shortcode and regex or something to clean non numerics and then reformat number for consistent display.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$atts</h4>
+                                                <code>string</code><p><p>WordPress shortcode atttributes. <code>mobile</code> Whether this instance is the floating phone number that only appears for mobile browsers. <code>number</code> The number type. Default types are phone or fax.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_get_phone" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_get_social" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_get_social .collapse">
+        <h1>kmw_get_social<a href="../namespaces/default.html#function_kmw_get_social">¶</a></h1>
+        <p class="short_description">Social media icons. Default social media networks: Twitter, Facebook, GitHub, Codepen, Instagram, Pinterest, Reddit, LinkedIn, SoundCloud, YouTube, RSS, E-Mail</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Shortcodes</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>[kmw_social]</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    link
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><a href="https://fontawesome.com/">https://fontawesome.com/</a></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_get_social" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_get_year" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_get_year .collapse">
+        <h1>kmw_get_year<a href="../namespaces/default.html#function_kmw_get_year">¶</a></h1>
+        <p class="short_description">Current year as shortcode. Just uses PHP to fetch the current year. Possibly useful for copyright notices, freshening content, etc.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Shortcodes</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>[kmw_year]</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_get_year" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_none_404_help_text" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_none_404_help_text .collapse">
+        <h1>kmw_none_404_help_text<a href="../namespaces/default.html#function_kmw_none_404_help_text">¶</a></h1>
+        <p class="short_description">More useful WordPress 404 &amp; error text.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>For use in the 404 template and sometimes the &quot;none&quot; template, depending on the site type. <strong>MUST-CUSTOMIZE: Pay attention to the URLs -- e.g., sitemap, contact. They might be different for you and I can't guess what your page names/permalinks are.</strong></p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Template Functions</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>&lt;?php echo kmw_none_404_help_text(); ?&gt;</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_none_404_help_text" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_remove_admin_bar" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_remove_admin_bar .collapse">
+        <h1>kmw_remove_admin_bar<a href="../namespaces/default.html#function_kmw_remove_admin_bar">¶</a></h1>
+        <p class="short_description">Strip WP admin bar for any non-admin user on the front end</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Clean-Up</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_remove_admin_bar" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_remove_admin_bar" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_remove_admin_bar .collapse">
+        <h1>kmw_remove_admin_bar<a href="../namespaces/default.html#function_kmw_remove_admin_bar">¶</a></h1>
+        <p class="short_description">Strip admin bar from front end for all users except administrators.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_remove_admin_bar" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_remove_dashboard_meta" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_remove_dashboard_meta .collapse">
+        <h1>kmw_remove_dashboard_meta<a href="../namespaces/default.html#function_kmw_remove_dashboard_meta">¶</a></h1>
+        <p class="short_description">Strip default WordPress dashboard widgets for cleaner experience.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_remove_dashboard_meta" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_remove_tags_categories" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_remove_tags_categories .collapse">
+        <h1>kmw_remove_tags_categories<a href="../namespaces/default.html#function_kmw_remove_tags_categories">¶</a></h1>
+        <p class="short_description">Remove post tags, categories: DISABLED.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Remove post tags and category core WordPress functionality. Useful if you are building a site without a blog. Disabled by default.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_remove_tags_categories" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_remove_thumbnail_support" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_remove_thumbnail_support .collapse">
+        <h1>kmw_remove_thumbnail_support<a href="../namespaces/default.html#function_kmw_remove_thumbnail_support">¶</a></h1>
+        <p class="short_description">Remove featured image/thumbnail support.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Remove Thumbnail/Featured Image support for posts and page types. Disabled by deafult.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_remove_thumbnail_support" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_remove_wp_author_date_archives" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_remove_wp_author_date_archives .collapse">
+        <h1>kmw_remove_wp_author_date_archives<a href="../namespaces/default.html#function_kmw_remove_wp_author_date_archives">¶</a></h1>
+        <p class="short_description">Remove author and date archive pages.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_remove_wp_author_date_archives" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_remove_wp_login_logo" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_remove_wp_login_logo .collapse">
+        <h1>kmw_remove_wp_login_logo<a href="../namespaces/default.html#function_kmw_remove_wp_login_logo">¶</a></h1>
+        <p class="short_description">Strip WordPress logo from login page.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_remove_wp_login_logo" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_remove_wp_ver_css_js" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_remove_wp_ver_css_js .collapse">
+        <h1>kmw_remove_wp_ver_css_js<a href="../namespaces/default.html#function_kmw_remove_wp_ver_css_js">¶</a></h1>
+        <p class="short_description">Strip WordPress script versions on the front end</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Clean-Up</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$src</h4>
+                                                <code>string</code><p><p>The style/script loader src in WP filter script_loader_src</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_remove_wp_ver_css_js" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_remove_wp_version" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_remove_wp_version .collapse">
+        <h1>kmw_remove_wp_version<a href="../namespaces/default.html#function_kmw_remove_wp_version">¶</a></h1>
+        <p class="short_description">Strip WordPress version on the front end</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Clean-Up</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_remove_wp_version" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_replace_howdy" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_replace_howdy .collapse">
+        <h1>kmw_replace_howdy<a href="../namespaces/default.html#function_kmw_replace_howdy">¶</a></h1>
+        <p class="short_description">Remove &quot;Howdy&quot; in the WP admin bar.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$wp_admin_bar</h4>
+                                                <code></code><p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_replace_howdy" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_set_search_per_page" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_set_search_per_page .collapse">
+        <h1>kmw_set_search_per_page<a href="../namespaces/default.html#function_kmw_set_search_per_page">¶</a></h1>
+        <p class="short_description">Set number of posts per page on search results. Default 25.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$query</h4>
+                                                <code>string</code><p><p>The WordPress query, which we are checking to see if it is a search query.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_set_search_per_page" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_sitemap_categories" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_sitemap_categories .collapse">
+        <h1>kmw_sitemap_categories<a href="../namespaces/default.html#function_kmw_sitemap_categories">¶</a></h1>
+        <p class="short_description">HTML sitemap: Categories.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). <code>[kmw_categories]</code> simply fetches a list of your blog categories.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Shortcodes</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>[kmw_categories]</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_sitemap_categories" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_sitemap_pages" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_sitemap_pages .collapse">
+        <h1>kmw_sitemap_pages<a href="../namespaces/default.html#function_kmw_sitemap_pages">¶</a></h1>
+        <p class="short_description">HTML sitemap: Pages.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). <code>[kmw_pages]</code> duplicates the primary menu since you might have &quot;off-menu&quot; pages you don't want to display. If you want a straight list of all pages regardless of the menu, you'll want <a href="http://codex.wordpress.org/Function_Reference/wp_list_pages">wp_list_pages()</a>.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Shortcodes</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>[kmw_sitemap]</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_sitemap_pages" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_sort_categories" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_sort_categories .collapse">
+        <h1>kmw_sort_categories<a href="../namespaces/default.html#function_kmw_sort_categories">¶</a></h1>
+        <p class="short_description">Faux-dropdown sorting for WordPress categories.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Template Functions</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>&lt;?php echo kmw_sort_categories('category'); ?&gt;</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$taxtype</h4>
+                                                <code>string</code><p><p>The name of the WordPress taxonomy you wish to display.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_sort_categories" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_truncate" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_truncate .collapse">
+        <h1>kmw_truncate<a href="../namespaces/default.html#function_kmw_truncate">¶</a></h1>
+        <p class="short_description">Truncate text.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Shortens a longer text (for example: the excerpt, the content, a custom meta value) to a number of characters you specify.  The number is optional and defaults to 25.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\Template Functions</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    link
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><a href="http://stackoverflow.com/questions/9219795/truncating-text-in-php">http://stackoverflow.com/questions/9219795/truncating-text-in-php</a></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    example
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p><code>&lt;?php echo kmw_truncate("Some content here. Blah blah blah blah.", 175); ?&gt;</code></p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$text</h4>
+                                                <code>string</code><p><p>The text you wish to truncate.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$chars</h4>
+                                                <code>integer</code><p><p>The number of characters where you wish to truncate.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_truncate" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_wp_admin_footer_remove_thanks" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_wp_admin_footer_remove_thanks .collapse">
+        <h1>kmw_wp_admin_footer_remove_thanks<a href="../namespaces/default.html#function_kmw_wp_admin_footer_remove_thanks">¶</a></h1>
+        <p class="short_description">Remove &quot;Thank you&quot; in lower left corner of WP Admin.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                    
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_wp_admin_footer_remove_thanks" class="more">« More »</a>    </div>
+
+                                        <div id="function_kmw_wp_mail_from_name" class="element ajax clickable function" data-toggle="collapse" data-target="#function_kmw_wp_mail_from_name .collapse">
+        <h1>kmw_wp_mail_from_name<a href="../namespaces/default.html#function_kmw_wp_mail_from_name">¶</a></h1>
+        <p class="short_description">Set WordPress email name.</p>
+        <div class="details collapse">
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Set the WordPress email name to reduce the potential problems with deliverability and remove &quot;WordPress&quot; from the from name.</p></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    package
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>KMW-FS\WordPress Tweaks</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                                                                    </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$original_email_from</h4>
+                                                <code>string</code><p><p>The original email we are filtering on wp_mail_from_name.</p></p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                    </div>
+        <a href="../namespaces/default.html#function_kmw_wp_mail_from_name" class="more">« More »</a>    </div>
+
+                            </div>
+        
+                    <div class="namespace-indent">
+                <h3><i class="icon-custom icon-constant"></i> Constants</h3>
+                                        <div id="constant_WP_POST_REVISIONS" class="element ajax clickable constant" data-toggle="collapse" data-target="#constant_WP_POST_REVISIONS .collapse">
+        <h1>WP_POST_REVISIONS<a href="../namespaces/default.html#constant_WP_POST_REVISIONS">¶</a></h1>
+        <p class="short_description">Define WordPress revisions.</p>
+        <div class="details collapse">
+                            
+                    </div>
+        <a href="../namespaces/default.html#constant_WP_POST_REVISIONS" class="more">« More »</a>    </div>
+
+                            </div>
+        
+            
+    
+        </div>
+    </div>
     </div>
 
-        </div>
-    </section>
-    <section class="row-fluid">
-        <div class="span10 offset2">
-            <div class="row-fluid">
-                <div class="span8 content namespace">
-                    <nav>
-                                                
-                                            </nav>
-                    <h1><small></small>\</h1>
-
-                    
-                    
-                    
-                                    </div>
-
-                <aside class="span4 detailsbar">
-                    <dl>
-                        <dt>Namespace hierarchy</dt>
-                        <dd class="hierarchy">
-                                                                                                                                                <div class="namespace-wrapper">\</div>
-                        </dd>
-                    </dl>
-                </aside>
-            </div>
-
-            
-            
-        </div>
-    </section>
-
-    <footer class="row-fluid">
-        <section class="span10 offset2">
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <section class="row-fluid footer-sections">
-                        <section class="span4">
-                                                        <h1><i class="icon-code"></i></h1>
-                            <div>
-                                <ul>
-                                                                    </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-bar-chart"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                        <section class="span4">
-                                                        <h1><i class="icon-pushpin"></i></h1>
-                            <div>
-                                <ul>
-                                    <li><a href="../reports/errors.html">Errors</a></li>
-                                    <li><a href="../reports/markers.html">Markers</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </section>
-                </section>
-            </section>
-            <section class="row-fluid">
-                <section class="span10 offset1">
-                    <hr />
-                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on November 17th, 2018 at 06:55.
-                </section>
-            </section>
-        </section>
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Sat, 17 Nov 2018 07:39:52 +0100.<br/>
     </footer>
-</div>
-
-</body>
+    </body>
 </html>

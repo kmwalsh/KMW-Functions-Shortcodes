@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * WordPress clean-up tweaks such as removing emojis, stripping script style versions, etc.
+ * 
  * @package KMW-FS\WordPress Clean-Up
  */
 

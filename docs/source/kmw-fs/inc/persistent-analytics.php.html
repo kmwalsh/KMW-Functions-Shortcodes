@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+/**
+ * Persistent analytics.
+ * &quot;Safer&quot; than anything theme-based and even plugin-based. Because you're loading this file as a mu-plugin, it will *always* run even if you change the theme and even if you deactivate your other SEO plugins. Helps you avoid losing your precious GA data!
+ * 
+ * @package KMW-FS\Persistent Analytics
+ */
+
+if ( ! function_exists( 'kmw_add_googleanalytics' ) ) {
+	
+	add_action('wp_footer', 'kmw_add_googleanalytics');
+
+	/**
+	 * Add Google Analytics to site.
+	 */ 
+	function kmw_add_googleanalytics() {
+		if ( ! is_admin() ) {
+		ob_start(); ?&gt;
+		
+&lt;script&gt;
+// add Google Analytics code here
+&lt;/script&gt;
+
+		&lt;?php
+			$return = ob_get_clean();
+			print $return;
+		}
+	}
+	
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

@@ -1,77 +1,569 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="KMW WordPress Functions and Shortcodes" version="2.8.5">
   <partials/>
-  <file path="kmw-fs\inc\wordpress-clean.php" generated-path="kmw-fs.inc.wordpress-clean.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+  <file path="kmw-fs\inc\wordpress-clean.php" generated-path="kmw-fs.inc.wordpress-clean.html" hash="5100a5ee457dbbcf244e0514a6408d41" package="KMW-FS\WordPress Clean-Up">
     <docblock line="0">
-      <description></description>
+      <description>WordPress clean-up tweaks such as removing emojis, stripping script style versions, etc.</description>
       <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
+      <tag name="package" line="0" description="KMW-FS\WordPress Clean-Up"/>
     </docblock>
+    <function namespace="" line="22" package="KMW-FS\WordPress Clean-Up">
+      <name>kmw_disable_wp_emojicons</name>
+      <full_name>\kmw_disable_wp_emojicons()</full_name>
+      <docblock line="22">
+        <description>Disable WP Emojis</description>
+        <long-description></long-description>
+        <tag name="package" line="22" description="KMW-FS\WordPress Clean-Up"/>
+      </docblock>
+    </function>
+    <function namespace="" line="46" package="KMW-FS\WordPress Clean-Up">
+      <name>kmw_disable_emojicons_tinymce</name>
+      <full_name>\kmw_disable_emojicons_tinymce()</full_name>
+      <docblock line="46">
+        <description>Disable WP Emojis in TinyMCE Editor</description>
+        <long-description></long-description>
+        <tag name="package" line="46" description="KMW-FS\WordPress Clean-Up"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$plugins</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="" line="69" package="KMW-FS\WordPress Clean-Up">
+      <name>kmw_remove_wp_ver_css_js</name>
+      <full_name>\kmw_remove_wp_ver_css_js()</full_name>
+      <docblock line="69">
+        <description>Strip WordPress script versions on the front end</description>
+        <long-description></long-description>
+        <tag name="package" line="69" description="KMW-FS\WordPress Clean-Up"/>
+        <tag name="param" line="69" description="&lt;p&gt;The style/script loader src in WP filter script_loader_src&lt;/p&gt;" type="string" variable="$src">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$src</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="85" package="KMW-FS\WordPress Clean-Up">
+      <name>kmw_remove_wp_version</name>
+      <full_name>\kmw_remove_wp_version()</full_name>
+      <docblock line="85">
+        <description>Strip WordPress version on the front end</description>
+        <long-description></long-description>
+        <tag name="package" line="85" description="KMW-FS\WordPress Clean-Up"/>
+      </docblock>
+    </function>
+    <function namespace="" line="98" package="KMW-FS\WordPress Clean-Up">
+      <name>kmw_remove_admin_bar</name>
+      <full_name>\kmw_remove_admin_bar()</full_name>
+      <docblock line="98">
+        <description>Strip WP admin bar for any non-admin user on the front end</description>
+        <long-description></long-description>
+        <tag name="package" line="98" description="KMW-FS\WordPress Clean-Up"/>
+      </docblock>
+    </function>
     <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="46" code="PPC:ERR-50015">Argument $plugins is missing from the Docblock of kmw_disable_emojicons_tinymce</error>
     </parse_markers>
+    <source>eJydVV1P2zAUfW6l/oc7CdFQFaI9IGAb2iTGXiYkJJh4mWSZxGkNiZPZLqVD/e+713b6mQZYkdrgnHvu17m+X75W46rX7XXjwaDXhQHclTq91sIYSHLB1eGkAjsV/NGAmSRj4Aa0KMonqUaAvw/SDMFYLauKTkyCTxYPZrmAJ6GNLBUChE2OHLn7+lbx5JGPBPy8ujv8cfN76fHCefxVESxeBDWAVBp+j4zeIZ2Mra0+xfEUTSsyPTIWScVzMuZqJI6Ssoh5/PH0+PjkFOGOS2YQwQfIJiqxGBYTz9JYE0H/sZiy4IFNK+acJBh3Hw7wr9d9IWvAD09Txp0xWkklbX/Yav251+24DDqY9feQw901XIY08DiGmryOC3YRRhQLIV/8D33iGHiegw+KOpNzK1Kw5aJUNdI1TSzD52khFau0VJa5dhlKxv/vbOtTl8YuFoxvLHi6aZoKK3yRvSDw/Ukrz1o0zmQrnC3O1wL7z9wymVuhPUXBZU6m+Ij6sjKRf0VgyEqNT/S+lcSOBcPmWYGuMyHSZrZ2DhRzQfZWPFumjWnjWJOGZyA1eEq4lWp2dXG5JQ4S9jJkBLEiEazKJyOpzKbIF4JkhETgMvo5BeC+3jhuTVz1zLWMDki1yOUylbbUbxmmLWcR7IUcoWG2XALSMK41n61BD1ZhvmN2ohU4JLrLsiV8CMEeW1b3aa3bcxC5EW2M0Rr8nZUOYkK94HXMEmPYQ/PFtui/mw2WlzxFA6OTuv+NTEM4Oztb5LPO48b0/USrnb+hzbKyksJ+qTcLYIdxwiDTOGIgVBrqNIDFAy4bzQu3onA/7WEYcIsWLsk40PkQgd6hsFBlYXC2MliorLMmsKaEIu/LSaXTcS3CGKoyvMBSIPbcdYIAHYc+r2f/z0ToGSpvFDkcVsez0UbpBG3QyXLu6Cco4u16oCK2icFdXyOhhOY4Y439cxSvtS3gGtr1ej3JMAplDJn3+1SH+TvS9fvlnuu2nd7nmaU+o5OKYZyF2Mh4ybIj4WtwEEAI4IIArmagSnXoTycGNbWzBFvX1qbTpv0fck8mWtOGIA8s4ZQKWWEdfOMOYH8fYXSZ0XnkRFdzuMoCmHE5XXGWcbyVvN7mmyL7B2T5Hu4=</source>
   </file>
-  <file path="kmw-fs\inc\content-format-filters.php" generated-path="kmw-fs.inc.content-format-filters.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+  <file path="kmw-fs\inc\content-format-filters.php" generated-path="kmw-fs.inc.content-format-filters.html" hash="6f400674c2049bc611cf02706f121576" package="KMW-FS\Content Formatting">
     <docblock line="0">
-      <description></description>
+      <description>Content formatting filters such as trademark and registration mark.</description>
       <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
+      <tag name="package" line="0" description="KMW-FS\Content Formatting"/>
     </docblock>
+    <function namespace="" line="25" package="KMW-FS\Content Formatting">
+      <name>kmw_format_the_content</name>
+      <full_name>\kmw_format_the_content()</full_name>
+      <docblock line="25">
+        <description>Standardize trademark and registration marks.</description>
+        <long-description>Please remember that people are generally very varied. There will be a myriad different way people can enter different content different ways on a site. These were useful in one specific instance for me, but maybe your client decided to wrap every registration mark with a span and custom inline styling (sorry for ya). These content formatting filters can (and *should*) only go so far. If you wind up with many dozens of lines in this file, something is going wrong in the content pipeline, and you may want to attempt to address that through your organization, client, whoever you're working for.</long-description>
+        <tag name="package" line="25" description="KMW-FS\Content Formatting"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$content</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
     <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="25" code="PPC:ERR-50015">Argument $content is missing from the Docblock of kmw_format_the_content</error>
     </parse_markers>
+    <source>eJytVNtO20AQfSZS/mGKqsaJ3AToI/QmChXqBURa8YIUbbxje5W1d7W7JoSKt35JP6Af0U/pl3TGzoUKKBQBkrOXmTPnnBl757XNbbvVbg16vXYLerBryoBlgNS4QoSgygxSpQM6D75KchAeghMSC+EmIEoJDjPl6SgoUwKf9muc+vHGimQiMoQPn06e7w9PF+D7S3AOG3B9lUIETyCtyoSRRnhOqD6CzqSYjhoyo5DjKGkgOtCl/2+cCfQ3GMDJ4fG7o+O94RB2D4/3mmMh5ahhH3WuJse3wna3b84MKmh8QB6eJ+jsXRWXIo4+fn1/8Hm43At5JsoEJSSVD6agVqCW/nopkaSDOfaZ0NW/mMawuRHDi6bsWt32NWrVMFAzhZPqAu9qsO83KUcahUe6L7AYo4OQiwAWjdUIwiFkWKITWs/gDB09hFMo+/AlR7qcKq1hTIFQzJwSEqRKU7qg6ZiK2QImESXQEYGvrudC/k7wQOQEeBWwrkC8plym8phWGlRJ9wjeYqJSldDeBzaWxxwKjGFcBdI2I0IzUzlItKpLULgk94OBqRMWsBZyzRASE3KubokuWzbvliq14qphpvk9irxxlM4lZ6K7oJnc/sKx+ojxej43lZa9LqkgOzMD3kAqXB8OUiZMBCiqsg2RQpQzkOYCS3IlBebg2YGQK8/YJNebAmlLtegoM7yYOsNbDluRssoi58e1LK5EJpHfdEWeEF0sbLOU0qH3zQyE3JkqyxsrjctEqS5qt+K5sTFMc8NmckiHp8G4Sa3ckKZmuurnAJpZX3wW4Oahjp7OF90mfPldmL9GEevtgjXeqzGNFY9iTag2iAVf6+kqf4ENL6mTbuTQapFgtP6McrbXY1jf8ZV9Ve92BryksyWf7btxfv18BJDTamPj7d49gP7HF/4M3NeMOviKHc3+QVp+f//xKDin1dbm1ta9oFZgDkPlyuXlvMxl89NuXf4BJXFTIw==</source>
   </file>
-  <file path="kmw-fs\inc\persistent-analytics.php" generated-path="kmw-fs.inc.persistent-analytics.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+  <file path="kmw-fs\inc\persistent-analytics.php" generated-path="kmw-fs.inc.persistent-analytics.html" hash="146cb9e935a1595995c559b140782448" package="KMW-FS\Persistent Analytics">
     <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
+      <description>Persistent analytics.</description>
+      <long-description>"Safer" than anything theme-based and even plugin-based. Because you're loading this file as a mu-plugin, it will *always* run even if you change the theme and even if you deactivate your other SEO plugins. Helps you avoid losing your precious GA data!</long-description>
+      <tag name="package" line="0" description="KMW-FS\Persistent Analytics"/>
     </docblock>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-    </parse_markers>
+    <function namespace="" line="17" package="KMW-FS\Persistent Analytics">
+      <name>kmw_add_googleanalytics</name>
+      <full_name>\kmw_add_googleanalytics()</full_name>
+      <docblock line="17">
+        <description>Add Google Analytics to site.</description>
+        <long-description></long-description>
+        <tag name="package" line="17" description="KMW-FS\Persistent Analytics"/>
+      </docblock>
+    </function>
+    <source>eJx1ktFq2zAUhq9t8DucloEd08QP0HRdBlsHZWyQi94UzKl17IgqkpDkpGHk3XckJ20vWmwMOuc/+j/98vLWbmyRF3lT10UONfwl56UPpAOgRnUIsvOL1LlcY0/uEsIGNfcOYSP1wCva0vwJPQkuCqAdabBqHKSeqgv4Th2OnuBgxtIRKINimpQeeqkI0APCdpxPY1cgA+ylUlCj2uPB1+BGPW0s+7gLdIwwUPSe/N+cTwJB2AW5w5BcHRiWOVj/+HNC8wv4Rcr6JMadkYKxfKRKcuuok2b0cLcCgQEvUgDp881i94xsfv/7Yf5z/fgur9U5ryhsYqhMU8EF9KNmGqNbemGpr6B83u5bFKIdjBkUvQZdwoyff0We8Rv7mOaqcm/b3phArrz6fHh2HT2zdJMZo66EgLukeUODYMDLQIskafhM2ZkOPtm3moiy02GkZ9FW6uqMmpmn1gd0oZpdw+3XWCnype+ctIFXTQP4EUhnBAHfCrG4eVXH6eX0T2ZZ9sVRGJ2GG2CPgULbRa4qHpS71klO/aRJpSN/jim943+SJOQp</source>
   </file>
-  <file path="kmw-fs\inc\template-functions.php" generated-path="kmw-fs.inc.template-functions.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+  <file path="kmw-fs\inc\template-functions.php" generated-path="kmw-fs.inc.template-functions.html" hash="6293c3e1834b34901fbbc3d8084aa642" package="KMW-FS\Template Functions">
     <docblock line="0">
-      <description></description>
+      <description>Template-related functions intended to be used in your own PHP theme templates.</description>
       <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
+      <tag name="package" line="0" description="KMW-FS\Template Functions"/>
     </docblock>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-    </parse_markers>
+    <function namespace="" line="19" package="KMW-FS\Template Functions">
+      <name>kmw_none_404_help_text</name>
+      <full_name>\kmw_none_404_help_text()</full_name>
+      <docblock line="19">
+        <description>More useful WordPress 404 &amp; error text.</description>
+        <long-description>For use in the 404 template and sometimes the "none" template, depending on the site type. **MUST-CUSTOMIZE: Pay attention to the URLs -- e.g., sitemap, contact. They might be different for you and I can't guess what your page names/permalinks are.**</long-description>
+        <tag name="package" line="19" description="KMW-FS\Template Functions"/>
+        <tag name="example" line="19" description="```&lt;?php echo kmw_none_404_help_text(); ?&gt;```"/>
+      </docblock>
+    </function>
+    <function namespace="" line="55" package="KMW-FS\Template Functions">
+      <name>kmw_truncate</name>
+      <full_name>\kmw_truncate()</full_name>
+      <docblock line="55">
+        <description>Truncate text.</description>
+        <long-description>Shortens a longer text (for example: the excerpt, the content, a custom meta value) to a number of characters you specify.  The number is optional and defaults to 25.</long-description>
+        <tag name="package" line="55" description="KMW-FS\Template Functions"/>
+        <tag name="link" line="55" description="http://stackoverflow.com/questions/9219795/truncating-text-in-php" link=":"/>
+        <tag name="example" line="55" description="```&lt;?php echo kmw_truncate(&quot;Some content here. Blah blah blah blah.&quot;, 175); ?&gt;```"/>
+        <tag name="param" line="55" description="&lt;p&gt;The text you wish to truncate.&lt;/p&gt;" type="string" variable="$text">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="55" description="&lt;p&gt;The number of characters where you wish to truncate.&lt;/p&gt;" type="integer" variable="$chars">
+          <type>integer</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$text</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$chars</name>
+        <default>25</default>
+        <type>integer</type>
+      </argument>
+    </function>
+    <function namespace="" line="76" package="KMW-FS\Template Functions">
+      <name>kmw_sort_categories</name>
+      <full_name>\kmw_sort_categories()</full_name>
+      <docblock line="76">
+        <description>Faux-dropdown sorting for WordPress categories.</description>
+        <long-description></long-description>
+        <tag name="package" line="76" description="KMW-FS\Template Functions"/>
+        <tag name="example" line="76" description="```&lt;?php echo kmw_sort_categories('category'); ?&gt;```"/>
+        <tag name="param" line="76" description="&lt;p&gt;The name of the WordPress taxonomy you wish to display.&lt;/p&gt;" type="string" variable="$taxtype">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$taxtype</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <source>eJyFVm1v2zYQ/uwA+Q83IZicwJLSokWR1Fa7BQtabMGCJUWBYYBCy2dLiyRqJJVEGPrfd0dKtuS1aZoqpHivzz131PxdndWHB4cH0cnJ4QGcwC2WdSEMBgr5zwrWTZWaXFYa8spgtaJXRsISodG0zCtoZaNAPlZw/eEaTIYlgumM6NDatI/3tUjvxQbh16vPweXNX70juOwdsFjEseRrmMIPW88JPuXa6Cn49+VjUskKk1enr5IMizox+GR8OKZ//x4eTOjX5jEhf1dS2RjXTQGfpVpdK9QaSBF+BFRKKmDd0Am75yW9JA1OivKwsn0mIKoVaFmiyUvU9tjjSLytxAxWWBM+ebUB6QzonBRNW2MIJydXn25ugwt6/H718c9fzuFatCAMIcopMqSs8emP3zQEAWC4CWdWvxT1DFJZGZGaEG4zbKHMN5nhCqzy9RoVWYA1RU51sFF+hFRUvoFNwwk/ZsK4EtUMfiUo/KhGVYoir+41CIVhD5l7vscnQSnhOdzd3c2ZH4BpJuHr4E+P38K7mCStcgRcv0lfuW/q2GpN5DLRRii2wdt3MUcwma/yB0gLofXCY5WAdL2YT/j/ZE713DsNCuKHE6HzIo/nAjKF64X3t3gQOlV5bc4zkpGqDTdyGrw49uJb1cJGcrWWREwQFp9wHol4HpGJnbGLDOmcq7M1G3WViby4W7EelyfXVBVNhGgJWuC4QK5BFIU1r8M92x9QrJz/jgA7F15cCiIiq7FxR0BGC8SGDvYt7RQ7spCBC7ciTlsL1FbMkQqpbwk/ik1UKTpDbGZnjLHRKFSaET7nO0/zqCncym0tOTZoEiecEA1LRwhbyIgq6VZWkFdHZfsgVC6WBcICiACsnRYoqo4ECk2jKhjI8esvTCv7+M50MIpeUzduZ8JwJNx2h8POv8mkoia01ZLVBt1YgCl31LYRuDL4lKKqzcxuGGPquxlppQ3xqgSaDAIeRNHgMddSQNWUS7JG1U8zoagMqLTFX9eY5us2BO7mXox4I2tORxS20itci6Ywmm29fD2aUu+5cc8hM6Y+jyIqYnovH1CtC/kYprKM/qG+t/M0Onv54uzN2euoA4VqGXByQV4Fdup/r9t7MKfeDU2+PmnIaOaE8HMhMliOHqE3gxdvXo8mAs99JUqiruJeO7LocuJ2wXg85jqz9O+8hSM9unTgiBHUQ7jGqD5yRM/ZcrPp/6Npm6ANa9Y7WhDk3YhislHoBVZO5hjiTqoTmLiMFi6z0APv7ei1bpak3zk4nXW6z8rQWtVSd3sf/OM9+c5VGIbO2Zdh4/DZuGWebRhN9E8Yg41UOeqv9s2laJ6ClZL1iq951uBScofsLtadiTFZn6HXnuup361b/3kGiSe+Ux0d6DpjMnBP7mIhCVnJsh1RohvL4be4sB/NzlGPx+RIqA2zQygl2qktiU+xUU/40P0sYjiduRMKB9Wy3R51xz7H7A9lRhJO5qebi15Em7bAr4jw3dLLZPkKE/oOMQNvg0hMbgpMitzfM9Gru6by911UTVH0FjpE9yz0EFkpJqlFiUc6HSS2OAvotlZ/iKql7hEhrjuhEfgWauKBszn4UrCXi7t+Bh8KPTsDLiMqr5eZzHUtql5q2RhD5d4Ku33/5TAZ8HOURBAXYolFf6+5j5CxEjUDijSjRnMZCW0Xls5MoJ3q+LYeuLQe6cMs4fk+HaqzYy8eRtefBTHHx+d7Hy5dWF8GIW/vbloyKFsY7TU9cbvBTd0NlGdvaffXFd4NnP8AXlCcQw==</source>
   </file>
-  <file path="kmw-functions-shortcodes.php" generated-path="kmw-functions-shortcodes.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+  <file path="kmw-functions-shortcodes.php" generated-path="kmw-functions-shortcodes.html" hash="33c48b674f58f8bed3fc9bf16f8f1513" package="KMW-FS">
     <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
+      <description>Plugin Name: KMW Functions &amp; Shortcodes
+Plugin URI: http://katemwalsh.com
+Description: Some useful custom functions.</description>
+      <long-description>Author: KMW
+Author URI: http://katemwalsh.com
+Version: 0.1.0</long-description>
+      <tag name="package" line="0" description="KMW-FS"/>
     </docblock>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-    </parse_markers>
+    <function namespace="" line="27" package="KMW-FS">
+      <name>kmw_fs_scripts</name>
+      <full_name>\kmw_fs_scripts()</full_name>
+      <docblock line="27">
+        <description>Enqueue scripts and styles for this plugin.</description>
+        <long-description></long-description>
+        <tag name="package" line="27" description="KMW-FS"/>
+      </docblock>
+    </function>
+    <source>eJyVk9uO0zAQhq8bKe8w3JC22sTltiABEltpxUFABVxaljtp0iZO1mMTKrTvvraTbRvYpUKJInX8/fPPwX31ui3aOGLzeRzBHD5Xdlsq+CRqXML7jz9gZZU0ZaMInsO6aLSRzQbpnP329WYJhTHtkrG9MFh3oqIik00dqHdIUpetz7GEdVMjWMLcViAtmaaG/MEgC/hba5xL8D77fcnkO2oKBovsRbYIofB50wq5F1v06dLV2sdYHMWRxltbauSNkjhN9nWX5sRKJVnrE5FBZVKhRHUwpaTMTSiZvfyHio6Ducy62tvKdZCeGr+o6Rq9aTUSpbJCof5HYDoU+6PAP2UOU3h2nDvHX65hmoLX85x4vy5KYOae33E0ca/YbLgIuOO6lqO6tWjxyF49og52k3CxJm4V170EBgCE2gCZQ4UEuVuwKUqCNtyoLAiY2+DkoUgYZ5/2hfnKJowNMtiJn6IHfNxVqXHrd6kHWd+iG1G68xX3KuJWV+5kR6ynsnDI+ermwzXnMLsCobU4eOSLRX1IfChxtyxbOM5o15JvNRiOxzLyG6BxxZJomMGfCXzwpHfcXwW7GAtY1p+eKh5b5Y0yIDok99d7wsUjA/GolT8ndkZltdvS07Z3cXR3D7w+Yew=</source>
   </file>
-  <file path="kmw-fs\inc\shortcodes.php" generated-path="kmw-fs.inc.shortcodes.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+  <file path="kmw-fs\inc\shortcodes.php" generated-path="kmw-fs.inc.shortcodes.html" hash="f44c1bf11b0656208a0828129b44811f" package="KMW-FS\Shortcodes">
     <docblock line="0">
-      <description></description>
+      <description>Custom WordPress shortcodes for things such as logged in/out content, the current year, social media icons, etc.</description>
       <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
+      <tag name="package" line="0" description="KMW-FS\Shortcodes"/>
     </docblock>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-    </parse_markers>
+    <function namespace="" line="20" package="KMW-FS\Shortcodes">
+      <name>kmw_get_logged_out_content</name>
+      <full_name>\kmw_get_logged_out_content()</full_name>
+      <docblock line="20">
+        <description>WordPress shortcode with start and end tags. Produces text visible only to Logged Out users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.</description>
+        <long-description></long-description>
+        <tag name="package" line="20" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="20" description="```[logged_out]stuff only logged out users see[/logged_out]```"/>
+        <tag name="param" line="20" description="&lt;p&gt;The content you want only logged out users to see.&lt;/p&gt;" type="string" variable="$content">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$content</name>
+        <default>null</default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="41" package="KMW-FS\Shortcodes">
+      <name>kmw_get_logged_in_content</name>
+      <full_name>\kmw_get_logged_in_content()</full_name>
+      <docblock line="41">
+        <description>WordPress shortcode with start and end tags. Produces text visible only to Logged In users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.</description>
+        <long-description></long-description>
+        <tag name="package" line="41" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="41" description="```[logged_in]stuff only logged in users see[/logged_in]```"/>
+        <tag name="param" line="41" description="&lt;p&gt;The content you want only logged in users to see. Accepts shortcodes.&lt;/p&gt;" type="string" variable="$content">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$content</name>
+        <default>null</default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="63" package="KMW-FS\Shortcodes">
+      <name>kmw_get_button</name>
+      <full_name>\kmw_get_button()</full_name>
+      <docblock line="63">
+        <description>WordPress shortcode with start and end tags. Produces buttons with optional subtitle.</description>
+        <long-description></long-description>
+        <tag name="package" line="63" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="63" description="```[button link=&quot;#!&quot; target=&quot;_self, _blank&quot; subtitle=&quot;&quot;]Primary[/button]```"/>
+        <tag name="param" line="63" description="&lt;p&gt;WordPress shortcode attributes. Contains three arguments. &lt;code&gt;$link&lt;/code&gt;, where you want the button to go. &lt;code&gt;$target&lt;/code&gt;, whether you want the button to open in a new window, use _blank or _new. And finally &lt;code&gt;$subtitle&lt;/code&gt;, the smaller text contained within the button.&lt;/p&gt;" type="array" variable="$atts">
+          <type>array</type>
+        </tag>
+        <tag name="param" line="63" description="&lt;p&gt;The content you want in the button. Accepts shortcodes.&lt;/p&gt;" type="string" variable="$content">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$atts</name>
+        <default></default>
+        <type>array</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$content</name>
+        <default>null</default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="87" package="KMW-FS\Shortcodes">
+      <name>kmw_get_social</name>
+      <full_name>\kmw_get_social()</full_name>
+      <docblock line="87">
+        <description>Social media icons. Default social media networks: Twitter, Facebook, GitHub, Codepen, Instagram, Pinterest, Reddit, LinkedIn, SoundCloud, YouTube, RSS, E-Mail</description>
+        <long-description></long-description>
+        <tag name="package" line="87" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="87" description="```[kmw_social]```"/>
+        <tag name="link" line="87" description="https://fontawesome.com/" link=":"/>
+      </docblock>
+    </function>
+    <function namespace="" line="122" package="KMW-FS\Shortcodes">
+      <name>kmw_get_googlemap</name>
+      <full_name>\kmw_get_googlemap()</full_name>
+      <docblock line="122">
+        <description>Google maps embed code. Useful so you don't have to change the Google map twenty times if the code changes, etc.</description>
+        <long-description></long-description>
+        <tag name="package" line="122" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="122" description="```[kmw_googlemap height=&quot;&quot; width=&quot;&quot;]```"/>
+        <tag name="param" line="122" description="&lt;p&gt;WordPress shortcode attributes &lt;code&gt;$width&lt;/code&gt; and &lt;code&gt;$height&lt;/code&gt; for the map. Can accept pixel, percentage, or whatever else you'd like.&lt;/p&gt;" type="array" variable="$atts">
+          <type>array</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$atts</name>
+        <default></default>
+        <type>array</type>
+      </argument>
+    </function>
+    <function namespace="" line="149" package="KMW-FS\Shortcodes">
+      <name>kmw_get_phone</name>
+      <full_name>\kmw_get_phone()</full_name>
+      <docblock line="149">
+        <description>Phone number shortcode: in-content or click to call for mobile.</description>
+        <long-description>Desktop or click-to-call for mobile Again, useful so you don't have to change it twenty times if the phone number changes (which it can -- call forwarding/tracking services are a great reason to make use of this code). **Note: You should *only* include the mobile number *once*.**</long-description>
+        <tag name="package" line="149" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="149" description="```[kmw_get_phone mobile=&quot;true or false&quot;]```"/>
+        <tag name="param" line="149" description="&lt;p&gt;WordPress shortcode atttributes. &lt;code&gt;mobile&lt;/code&gt; Whether this instance is the floating phone number that only appears for mobile browsers. &lt;code&gt;number&lt;/code&gt; The number type. Default types are phone or fax.&lt;/p&gt;" type="string" variable="$atts">
+          <type>string</type>
+        </tag>
+        <tag name="link" line="149" description="http://katemwalsh.com/fixed-position-click-to-call-mobile-phone-number-code/" link=":"/>
+        <tag name="todo" line="149" description="Support any phone number input here through shortcode and regex or something to clean non numerics and then reformat number for consistent display."/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$atts</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="181" package="KMW-FS\Shortcodes">
+      <name>kmw_sitemap_categories</name>
+      <full_name>\kmw_sitemap_categories()</full_name>
+      <docblock line="181">
+        <description>HTML sitemap: Categories.</description>
+        <long-description>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). ```[kmw_categories]``` simply fetches a list of your blog categories.</long-description>
+        <tag name="package" line="181" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="181" description="```[kmw_categories]```"/>
+      </docblock>
+    </function>
+    <function namespace="" line="207" package="KMW-FS\Shortcodes">
+      <name>kmw_sitemap_pages</name>
+      <full_name>\kmw_sitemap_pages()</full_name>
+      <docblock line="207">
+        <description>HTML sitemap: Pages.</description>
+        <long-description>HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). This function duplicates the primary menu since you might have "off-menu" pages you don't want to display. If you want a straight list of all pages regardless of the menu, you'll want [wp_list_pages()](http://codex.wordpress.org/Function_Reference/wp_list_pages).</long-description>
+        <tag name="package" line="207" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="207" description="```[kmw_sitemap]```"/>
+        <tag name="param" line="207" description="&lt;p&gt;Note: you need to change this to the location of your primary menu.&lt;/p&gt;" type="string" variable="$theme_location">
+          <type>string</type>
+        </tag>
+      </docblock>
+    </function>
+    <function namespace="" line="229" package="KMW-FS\Shortcodes">
+      <name>kmw_get_info</name>
+      <full_name>\kmw_get_info()</full_name>
+      <docblock line="229">
+        <description>get_bloginfo() as shortcode.</description>
+        <long-description>Uses ```get_bloginfo()``` to return data about the website. See [get_bloginfo() on the Codex](https://codex.wordpress.org/Function_Reference/get_bloginfo) for a full list of what can be returned with the key. Useful for placing the site's name in content. If your site rebrands later, you won't need to change the name in a million places *or* mess with MySQL replacements.</long-description>
+        <tag name="package" line="229" description="KMW-FS\Shortcodes"/>
+        <tag name="link" line="229" description="https://codex.wordpress.org/Function_Reference/get_bloginfo" link=":"/>
+        <tag name="example" line="229" description="```[site_info key=&quot;name&quot;]```"/>
+        <tag name="param" line="229" description="&lt;p&gt;WordPress shortcode attributes. Contains &lt;code&gt;key&lt;/code&gt;, the key of the &lt;code&gt;get_bloginfo()&lt;/code&gt; key you wish to return.&lt;/p&gt;" type="string" variable="$atts">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$atts</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="248" package="KMW-FS\Shortcodes">
+      <name>kmw_get_year</name>
+      <full_name>\kmw_get_year()</full_name>
+      <docblock line="248">
+        <description>Current year as shortcode. Just uses PHP to fetch the current year. Possibly useful for copyright notices, freshening content, etc.</description>
+        <long-description></long-description>
+        <tag name="package" line="248" description="KMW-FS\Shortcodes"/>
+        <tag name="example" line="248" description="```[kmw_year]```"/>
+      </docblock>
+    </function>
+    <markers>
+      <todo line="149">Support any phone number input here through shortcode and regex or something to clean non numerics and then reformat number for consistent display.</todo>
+    </markers>
+    <source>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</source>
   </file>
-  <file path="kmw-fs\inc\wordpress-tweak.php" generated-path="kmw-fs.inc.wordpress-tweak.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+  <file path="kmw-fs\inc\wordpress-tweak.php" generated-path="kmw-fs.inc.wordpress-tweak.html" hash="76601e6121f539c304b8b2a6a6984ca2" package="KMW-FS\WordPress Tweaks">
     <docblock line="0">
-      <description></description>
+      <description>WordPress tweaks such as the email from name, search results per page, removal of archives, etc.</description>
       <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
+      <tag name="package" line="0" description="KMW-FS\WordPress Tweaks"/>
     </docblock>
+    <constant namespace="" line="19" package="KMW-FS\WordPress Tweaks">
+      <name>WP_POST_REVISIONS</name>
+      <full_name>\WP_POST_REVISIONS</full_name>
+      <value>10</value>
+      <docblock line="19">
+        <description>Define WordPress revisions.</description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </constant>
+    <function namespace="" line="33" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_wp_mail_from_name</name>
+      <full_name>\kmw_wp_mail_from_name()</full_name>
+      <docblock line="33">
+        <description>Set WordPress email name.</description>
+        <long-description>Set the WordPress email name to reduce the potential problems with deliverability and remove "WordPress" from the from name.</long-description>
+        <tag name="package" line="33" description="KMW-FS\WordPress Tweaks"/>
+        <tag name="param" line="33" description="&lt;p&gt;The original email we are filtering on wp_mail_from_name.&lt;/p&gt;" type="string" variable="$original_email_from">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$original_email_from</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="50" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_set_search_per_page</name>
+      <full_name>\kmw_set_search_per_page()</full_name>
+      <docblock line="50">
+        <description>Set number of posts per page on search results. Default 25.</description>
+        <long-description></long-description>
+        <tag name="package" line="50" description="KMW-FS\WordPress Tweaks"/>
+        <tag name="param" line="50" description="&lt;p&gt;The WordPress query, which we are checking to see if it is a search query.&lt;/p&gt;" type="string" variable="$query">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$query</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="" line="69" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_remove_wp_author_date_archives</name>
+      <full_name>\kmw_remove_wp_author_date_archives()</full_name>
+      <docblock line="69">
+        <description>Remove author and date archive pages.</description>
+        <long-description></long-description>
+        <tag name="package" line="69" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </function>
+    <function namespace="" line="91" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_remove_tags_categories</name>
+      <full_name>\kmw_remove_tags_categories()</full_name>
+      <docblock line="91">
+        <description>Remove post tags, categories: DISABLED.</description>
+        <long-description>Remove post tags and category core WordPress functionality. Useful if you are building a site without a blog. Disabled by default.</long-description>
+        <tag name="package" line="91" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </function>
+    <function namespace="" line="107" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_remove_thumbnail_support</name>
+      <full_name>\kmw_remove_thumbnail_support()</full_name>
+      <docblock line="107">
+        <description>Remove featured image/thumbnail support.</description>
+        <long-description>Remove Thumbnail/Featured Image support for posts and page types. Disabled by deafult.</long-description>
+        <tag name="package" line="107" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </function>
+    <function namespace="" line="123" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_blockusers_init</name>
+      <full_name>\kmw_blockusers_init()</full_name>
+      <docblock line="123">
+        <description>Boot non-admin from wp-admin.</description>
+        <long-description>Redirects any URL with wp-admin for everyone but administrator-level users. Useful for building a site with users who should have no admin access. Defaults to disabled. This **requires a front-end login solution** (e.g., Theme My Login). Otherwise you'll be locked out of your WordPress admin until you edit out the boot again.</long-description>
+        <tag name="package" line="123" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </function>
+    <function namespace="" line="138" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_remove_admin_bar</name>
+      <full_name>\kmw_remove_admin_bar()</full_name>
+      <docblock line="138">
+        <description>Strip admin bar from front end for all users except administrators.</description>
+        <long-description></long-description>
+        <tag name="package" line="138" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </function>
+    <function namespace="" line="155" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_remove_wp_login_logo</name>
+      <full_name>\kmw_remove_wp_login_logo()</full_name>
+      <docblock line="155">
+        <description>Strip WordPress logo from login page.</description>
+        <long-description></long-description>
+        <tag name="package" line="155" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </function>
+    <function namespace="" line="176" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_remove_dashboard_meta</name>
+      <full_name>\kmw_remove_dashboard_meta()</full_name>
+      <docblock line="176">
+        <description>Strip default WordPress dashboard widgets for cleaner experience.</description>
+        <long-description></long-description>
+        <tag name="package" line="176" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </function>
+    <function namespace="" line="221" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_custom_dashboard_widget</name>
+      <full_name>\kmw_custom_dashboard_widget()</full_name>
+      <docblock line="221">
+        <description>Custom welcome widget.</description>
+        <long-description>Adds hidden content to admin_footer, then shows with jQuery, and inserts after welcome panel.</long-description>
+        <tag name="package" line="221" description="KMW-FS\WordPress Tweaks"/>
+        <tag name="author" line="221" description="Ren Ventura &lt;EngageWP.com&gt;"/>
+        <tag name="link" line="221" description="http://www.engagewp.com/how-to-create-full-width-dashboard-widget-wordpress" link="http://www.engagewp.com/how-to-create-full-width-dashboard-widget-wordpress"/>
+      </docblock>
+    </function>
+    <function namespace="" line="275" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_replace_howdy</name>
+      <full_name>\kmw_replace_howdy()</full_name>
+      <docblock line="275">
+        <description>Remove "Howdy" in the WP admin bar.</description>
+        <long-description></long-description>
+        <tag name="package" line="275" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$wp_admin_bar</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="" line="295" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_admin_bar_remove</name>
+      <full_name>\kmw_admin_bar_remove()</full_name>
+      <docblock line="295">
+        <description>Remove WP icon in upper right corner of WP admin bar.</description>
+        <long-description></long-description>
+        <tag name="package" line="295" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </function>
+    <function namespace="" line="310" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_footer_remove_wp_version</name>
+      <full_name>\kmw_footer_remove_wp_version()</full_name>
+      <docblock line="310">
+        <description>Remove WP version in lower right corner of WP Admin.</description>
+        <long-description></long-description>
+        <tag name="package" line="310" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </function>
+    <function namespace="" line="323" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_wp_admin_footer_remove_thanks</name>
+      <full_name>\kmw_wp_admin_footer_remove_thanks()</full_name>
+      <docblock line="323">
+        <description>Remove "Thank you" in lower left corner of WP Admin.</description>
+        <long-description></long-description>
+        <tag name="package" line="323" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+    </function>
+    <function namespace="" line="330" package="KMW-FS\WordPress Tweaks">
+      <name>kmw_edit_text</name>
+      <full_name>\kmw_edit_text()</full_name>
+      <docblock line="330">
+        <description>Replace "Thank you" in lower left corner of WP Admin with custom text (default blank).</description>
+        <long-description></long-description>
+        <tag name="package" line="330" description="KMW-FS\WordPress Tweaks"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$content</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
     <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="275" code="PPC:ERR-50015">Argument $wp_admin_bar is missing from the Docblock of kmw_replace_howdy</error>
+      <error line="330" code="PPC:ERR-50015">Argument $content is missing from the Docblock of kmw_edit_text</error>
     </parse_markers>
+    <source>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</source>
   </file>
-  <package name="Default" full_name="Default"/>
+  <package name="KMW-FS" full_name="KMW-FS">
+    <package name="Content Formatting" full_name="KMW-FS\Content Formatting"/>
+    <package name="Persistent Analytics" full_name="KMW-FS\Persistent Analytics"/>
+    <package name="Shortcodes" full_name="KMW-FS\Shortcodes"/>
+    <package name="Template Functions" full_name="KMW-FS\Template Functions"/>
+    <package name="WordPress Clean-Up" full_name="KMW-FS\WordPress Clean-Up"/>
+    <package name="WordPress Tweaks" full_name="KMW-FS\WordPress Tweaks"/>
+  </package>
   <package name="global" full_name="global"/>
+  <namespace name="global" full_name="global"/>
   <deprecated count="0"/>
 </project>

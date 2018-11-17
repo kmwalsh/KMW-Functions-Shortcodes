@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * Custom WordPress shortcodes for things such as logged in/out content, the current year, social media icons, etc.
+ *  
  * @package KMW-FS\Shortcodes
  */
 
@@ -9,15 +11,14 @@ if ( ! function_exists( 'kmw_get_logged_out_content' ) ) {
 	add_shortcode( 'logged_out', 'kmw_get_logged_out_content' );
 
 	/**
-	 * Logged Out user text: shortcode-compatible.
-	 * Something special you only want to show to logged OUT users? **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.
+	 * WordPress shortcode with start and end tags. Produces text visible only to Logged Out users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.
 	 * 
 	 * @example: ```[logged_out]stuff only logged out users see[/logged_out]```
 	 * @param string $content The content you want only logged out users to see.
 	 */ 
 
-	function kmw_get_logged_out_content( $atts, $content = null  ) {
-		if( is_user_logged_in() ){
+	function kmw_get_logged_out_content( $content = null  ) {
+		if( is_user_logged_in() ) {
 			echo '';
 		} else {
 			$output = do_shortcode($content);
@@ -31,15 +32,14 @@ if ( ! function_exists( 'kmw_get_logged_in_content' ) ) {
 	add_shortcode( 'logged_in', 'kmw_get_logged_in_content' );
 
 	/**
-	 * Logged In user text: shortcode-compatible.
-	 * Something special you only want to show to logged IN users? **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.
+	 * WordPress shortcode with start and end tags. Produces text visible only to Logged In users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.
 	 * 
 	 * @example: ```[logged_in]stuff only logged in users see[/logged_in]```
-	 * @param string $content The content you want only logged in users to see.
+	 * @param string $content The content you want only logged in users to see. Accepts shortcodes.
 	 */ 
 
-	function kmw_get_logged_in_content( $atts, $content = null  ) {
-		if( !is_user_logged_in() ){
+	function kmw_get_logged_in_content( $content = null  ) {
+		if( ! is_user_logged_in() ) {
 			echo '';
 		} else {
 			return do_shortcode($content);
@@ -53,13 +53,11 @@ if ( ! function_exists( 'kmw_get_button' ) ) {
 	add_shortcode('button', 'kmw_get_button'); 
 
 	/**
-	 * Fancy buttons with subtitle.
+	 * WordPress shortcode with start and end tags. Produces buttons with optional subtitle. 
 	 * 
 	 * @example: ```[button link="#!" target="_self, _blank" subtitle=""]Primary[/button]```
-	 * @param string $content The content you want in the button.
-	 * @param string $link The link where you want the button to go.
-	 * @param string $target Whether you want the button to open in a new window, use _blank or _new.
-	 * @param string $subtitle The subtitle and smaller text.
+	 * @param array $atts WordPress shortcode attributes. Contains three arguments. `$link`, where you want the button to go. `$target`, whether you want the button to open in a new window, use _blank or _new. And finally `$subtitle`, the smaller text contained within the button.
+	 * @param string $content The content you want in the button. Accepts shortcodes.
 	 */ 
 
 	function kmw_get_button($atts, $content = null) {
@@ -81,8 +79,7 @@ if ( ! function_exists( 'kmw_get_social' ) ) {
 	add_shortcode ('kmw_social','kmw_get_social');
 
 	/**
-	 * Social media icons.
-	 * Default social media networks: Twitter, Facebook, GitHub, Codepen, Instagram, Pinterest, Reddit, LinkedIn, SoundCloud, YouTube, RSS, E-Mail
+	 * Social media icons. Default social media networks: Twitter, Facebook, GitHub, Codepen, Instagram, Pinterest, Reddit, LinkedIn, SoundCloud, YouTube, RSS, E-Mail
 	 * 
 	 * @example: ```[kmw_social]```
 	 * @link: https://fontawesome.com/
@@ -116,12 +113,10 @@ add_shortcode('kmw_googlemap', 'kmw_get_googlemap');
 if ( ! function_exists( 'kmw_get_googlemap' ) ) {
 
 	/**
-	 * Google maps embed code. 
-	 * Useful so you don't have to change the Google map twenty times if the code changes, etc.. Height/width can accept pixel, percentage, or whatever else you'd like.
+	 * Google maps embed code. Useful so you don't have to change the Google map twenty times if the code changes, etc.
 	 * 
 	 * @example: ```[kmw_googlemap height="" width=""]```
-	 * @param string $width The width of the map embed in percent, pixel, em, etc.
-	 * @param string $height The height of the map embed in percent, pixel, em, etc.
+	 * @param array $atts WordPress shortcode attributes `$width` and `$height` for the map. Can accept pixel, percentage, or whatever else you'd like.
 	 */ 
 
 	function kmw_get_googlemap($atts) {
@@ -139,13 +134,14 @@ if ( ! function_exists( 'kmw_get_phone' ) )
 	add_shortcode('phone', 'kmw_get_phone');
 
 	/**
-	 * Phone number shortcode: in-content or click to call for mobile.
+	 * Phone number shortcode: in-content or click to call for mobile. 
 	 * Desktop or click-to-call for mobile Again, useful so you don't have to change it twenty times if the phone number changes (which it can -- call forwarding/tracking services are a great reason to make use of this code). **Note: You should *only* include the mobile number *once*.**
 	 * 
 	 * @example: ```[kmw_get_phone mobile="true or false"]```
+	 * @param string $atts WordPress shortcode atttributes. `mobile` Whether this instance is the floating phone number that only appears for mobile browsers. `number` The number type. Default types are phone or fax.
+	 * 
 	 * @link: http://katemwalsh.com/fixed-position-click-to-call-mobile-phone-number-code/
-	 * @param string mobile Whether this instance is the floating phone number that only appears for mobile browsers.
-	 * @param string number The number type. Default types are phone or fax.
+	 * 
 	 * @todo Support any phone number input here through shortcode and regex or something to clean non numerics and then reformat number for consistent display.
 	 * 
 	 */ 
@@ -176,7 +172,7 @@ if ( ! function_exists( 'kmw_sitemap_categories' ) ) {
 	add_shortcode('kmw_categories', 'kmw_sitemap_categories');
 
 	/**
-	 * HTML sitemap: Categories.
+	 * HTML sitemap: Categories. 
 	 * HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). ```[kmw_categories]``` simply fetches a list of your blog categories.
 	 * 
 	 * @example: ```[kmw_categories]```
@@ -202,7 +198,7 @@ if ( ! function_exists( 'kmw_sitemap_pages' ) ) {
 
 	/**
 	 * HTML sitemap: Pages.
-	 * HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). ```[kmw_pages]``` duplicates the primary menu since you might have "off-menu" pages you don't want to display. If you want a straight list of all pages regardless of the menu, you'll want [wp_list_pages()](http://codex.wordpress.org/Function_Reference/wp_list_pages).
+	 * HTML sitemap pages are useful for human visitors. This is a two-part shortcode because I usually use two separate shortcodes, each in one column. It's also useful to sometimes display just the pages or just the categories (outside of widgets etc.). This function duplicates the primary menu since you might have "off-menu" pages you don't want to display. If you want a straight list of all pages regardless of the menu, you'll want [wp_list_pages()](http://codex.wordpress.org/Function_Reference/wp_list_pages).
 	 * 
 	 * @example: ```[kmw_sitemap]```
 	 * @param string $theme_location Note: you need to change this to the location of your primary menu.
@@ -218,20 +214,19 @@ if ( ! function_exists( 'kmw_sitemap_pages' ) ) {
 
 
 if ( ! function_exists( 'kmw_get_info' ) ) {
+
+	add_shortcode('bloginfo', 'kmw_get_info');
+	
+	/**
+	 * get_bloginfo() as shortcode. 
+	 * Uses ```get_bloginfo()``` to return data about the website. See [get_bloginfo() on the Codex](https://codex.wordpress.org/Function_Reference/get_bloginfo) for a full list of what can be returned with the key. Useful for placing the site's name in content. If your site rebrands later, you won't need to change the name in a million places *or* mess with MySQL replacements.
+	 * 
+	 * @link: https://codex.wordpress.org/Function_Reference/get_bloginfo
+	 * @example: ```[site_info key="name"]```
+	 * @param string $atts WordPress shortcode attributes. Contains `key`, the key of the `get_bloginfo()` key you wish to return.
+	 * 
+	 */
 	function kmw_get_info($atts) {
-
-		add_shortcode('bloginfo', 'kmw_get_info');
-		
-		/**
-		 * get_bloginfo() as shortcode.
-		 * Uses ```get_bloginfo()``` to return data about the website. See [get_bloginfo() on the Codex](https://codex.wordpress.org/Function_Reference/get_bloginfo) for a full list of what can be returned with the key. Useful for placing the site's name in content. If your site rebrands later, you won't need to change the name in a million places *or* mess with MySQL replacements.
-		 * 
-		 * @link: https://codex.wordpress.org/Function_Reference/get_bloginfo
-		 * @example: ```[site_info key="name"]```
-		 * @param string $theme_location Note: you need to change this to the location of your primary menu.
-		 * 
-		 */ 
-
 		extract(shortcode_atts(array(
 				'key' => 'name',
 			), $atts));
@@ -245,8 +240,7 @@ if ( ! function_exists( 'kmw_get_year' ) ) {
 	add_shortcode('kmw_year', 'kmw_get_year');
 	
 	/**
-	 * Current year as shortcode.
-	 * Just uses PHP to fetch the current year. Possibly useful for copyright notices, freshening content, etc.
+	 * Current year as shortcode. Just uses PHP to fetch the current year. Possibly useful for copyright notices, freshening content, etc.
 	 * 
 	 * @example: ```[kmw_year]```
 	 * 

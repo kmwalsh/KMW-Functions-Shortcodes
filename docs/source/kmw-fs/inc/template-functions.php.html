@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+/**
+ * Template-related functions intended to be used in your own PHP theme templates.
+ * 
+ * @package KMW-FS\Template Functions
+ */
+
+if ( ! function_exists( 'kmw_none_404_help_text' ) ) {
+	
+	/**
+	 * More useful WordPress 404 &amp; error text.
+	 * 
+	 * For use in the 404 template and sometimes the &quot;none&quot; template, depending on the site type. **MUST-CUSTOMIZE: Pay attention to the URLs -- e.g., sitemap, contact. They might be different for you and I can't guess what your page names/permalinks are.**
+	 * 
+	 * @example: ```&lt;?php echo kmw_none_404_help_text(); ?&gt;```
+	 */ 
+
+	function kmw_none_404_help_text() {
+		ob_start();
+		?&gt; 
+		&lt;div class=&quot;help-404&quot;&gt;
+		
+			&lt;ul class=&quot;help-404-list&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;javascript:history.go(-1)&quot;&gt;Try going back a page.&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;Check the &lt;a href=&quot;/sitemap/&quot;&gt;sitemap&lt;/a&gt;. This displays a list of all pages.&lt;/li&gt;
+				&lt;li&gt;Head back to the &lt;a href=&quot;/&quot;&gt;main page&lt;/a&gt; and start again.&lt;/li&gt;
+				&lt;li&gt;&lt;a href=&quot;/contact/&quot;&gt;Contact us&lt;/a&gt; if you need assistance.&lt;/li&gt;				
+				&lt;li&gt;Try searching:&lt;/li&gt;
+			&lt;/ul&gt;
+			
+			&lt;?php get_search_form(); ?&gt;
+		&lt;/div&gt;
+		&lt;?php 
+		$myvariable = ob_get_clean();
+		return $myvariable;
+	}
+
+}
+
+
+if ( ! function_exists( 'kmw_truncate' ) ) {
+
+	/**
+	 * Truncate text.
+	 * Shortens a longer text (for example: the excerpt, the content, a custom meta value) to a number of characters you specify.  The number is optional and defaults to 25.
+	 * 
+	 * @link: http://stackoverflow.com/questions/9219795/truncating-text-in-php
+	 * @example: ```&lt;?php echo kmw_truncate(&quot;Some content here. Blah blah blah blah.&quot;, 175); ?&gt;```
+	 * @param string $text The text you wish to truncate.
+	 * @param int $chars The number of characters where you wish to truncate.
+	 * 
+	 */
+
+	function kmw_truncate($text, $chars = 25) {
+		if (strlen($text) &gt; $chars) {
+			$text = $text.&quot; &quot;;
+			$text = substr($text,0,$chars);
+			$text = substr($text,0,strrpos($text,' '));
+			$text = $text.&quot;...&quot;;
+		}
+		return $text;
+	}
+
+}
+
+if ( ! function_exists( 'kmw_sort_categories' ) ) {
+
+	/**
+	 * Faux-dropdown sorting for WordPress categories.
+	 * 
+	 * @example: ```&lt;?php echo kmw_sort_categories('category'); ?&gt;```
+	 * @param string $taxtype The name of the WordPress taxonomy you wish to display.
+	 */
+
+	function kmw_sort_categories( $taxtype ) {
+
+		$args = array(
+			'parent'        =&gt; 0,
+			'orderby'            =&gt; 'name',
+			'order'              =&gt; 'ASC',
+			'style'              =&gt; 'list',
+			'hide_empty'         =&gt; 0,
+			'title_li'           =&gt; '',
+			'number'             =&gt; null,
+			'taxonomy'           =&gt; $taxtype,
+		);
+
+		$get_tax_name = get_taxonomy( $taxtype );
+		$cats = get_categories( $args ); 
+
+		ob_start(); ?&gt;
+
+			&lt;div class=&quot;dropdown-sorter&quot;&gt;
+
+				&lt;span class=&quot;button dropdown-button&quot;&gt;
+					&lt;?php echo $get_tax_name-&gt;label; ?&gt;
+					&lt;ul&gt;
+					&lt;?php foreach ( $cats as $category ) { ?&gt;
+						&lt;li&gt;&lt;a href=&quot;&lt;?php echo get_term_link( $category ); ?&gt;&quot;&gt;&lt;?php echo $category-&gt;name; ?&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;?php } ?&gt;
+					&lt;/ul&gt;
+				&lt;/span&gt;
+
+			&lt;/div&gt;	
+
+		&lt;?php 
+		$return = ob_get_clean();
+		return $return;
+
+	}
+
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * Plugin Name: KMW Functions &amp; Shortcodes
+ * Plugin URI: http://katemwalsh.com
+ * Description: Some useful custom functions.
+ * Author: KMW
+ * Author URI: http://katemwalsh.com
+ * Version: 0.1.0
+ * 
+ * @package KMW-FS
+ */
+
+require_once('kmw-fs/inc/persistent-analytics.php');
+require_once('kmw-fs/inc/shortcodes.php');
+require_once('kmw-fs/inc/template-functions.php');
+require_once('kmw-fs/inc/wordpress-clean.php');
+require_once('kmw-fs/inc/wordpress-tweak.php');
+
+
+if ( ! function_exists( 'kmw_fs_scripts' ) ) {
+	
+	add_action( 'wp_enqueue_scripts', 'kmw_fs_scripts' );
+
+	/**
+	 * Enqueue scripts and styles for this plugin.
+	 */ 
+	function kmw_fs_scripts() {
+		
+		// plugin javascript
+		wp_register_script( 'kmw-fs-js', plugins_url( 'js/script.js', __FILE__ ), array( 'jQuery' ), '1.0.0', true );
+		wp_enqueue_script( 'kmw-fs-js' );
+		
+		// plugin css styles
+		wp_enqueue_style( 'kmw-fs-css', plugins_url( 'css/style.css', __FILE__ ) );
+		
+		// font awesome
+		wp_enqueue_style( 'fontawesome-css', plugins_url( 'fonts/fontawesome.min.css', __FILE__ ) );
+		
+	}
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

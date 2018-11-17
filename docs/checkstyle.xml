@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="kmw-fs\inc\wordpress-clean.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="44" severity="error" message="Argument $plugins is missing from the Docblock of kmw_disable_emojicons_tinymce" source="phpDocumentor.file.PPC:ERR-50015"/>
+  </file>
+  <file name="kmw-fs\inc\content-format-filters.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="23" severity="error" message="Argument $content is missing from the Docblock of kmw_format_the_content" source="phpDocumentor.file.PPC:ERR-50015"/>
+  </file>
+  <file name="kmw-fs\inc\persistent-analytics.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+  </file>
+  <file name="kmw-fs\inc\template-functions.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+  </file>
+  <file name="kmw-functions-shortcodes.php">
+    <error line="24" severity="error" message="No summary for function \kmw_fs_scripts()" source="phpDocumentor.file.PPC:ERR-50011"/>
+  </file>
+  <file name="kmw-fs\inc\shortcodes.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="19" severity="error" message="Name of argument $atts does not match with the DocBlock's name $content in \kmw_get_logged_out_content()" source="phpDocumentor.file.PPC:ERR-50014"/>
+    <error line="19" severity="error" message="Argument $content is missing from the Docblock of kmw_get_logged_out_content" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="41" severity="error" message="Name of argument $atts does not match with the DocBlock's name $content in \kmw_get_logged_in_content()" source="phpDocumentor.file.PPC:ERR-50014"/>
+    <error line="41" severity="error" message="Argument $content is missing from the Docblock of kmw_get_logged_in_content" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="65" severity="error" message="Name of argument $atts does not match with the DocBlock's name $content in \kmw_get_button()" source="phpDocumentor.file.PPC:ERR-50014"/>
+    <error line="65" severity="error" message="Name of argument $content does not match with the DocBlock's name $link in \kmw_get_button()" source="phpDocumentor.file.PPC:ERR-50014"/>
+    <error line="65" severity="notice" message="Parameter $link could not be found in \kmw_get_button()" source="phpDocumentor.file.PPC:ERR-50013"/>
+    <error line="65" severity="notice" message="Parameter $target could not be found in \kmw_get_button()" source="phpDocumentor.file.PPC:ERR-50013"/>
+    <error line="65" severity="notice" message="Parameter $subtitle could not be found in \kmw_get_button()" source="phpDocumentor.file.PPC:ERR-50013"/>
+    <error line="127" severity="error" message="Name of argument $atts does not match with the DocBlock's name $width in \kmw_get_googlemap()" source="phpDocumentor.file.PPC:ERR-50014"/>
+    <error line="127" severity="notice" message="Parameter $width could not be found in \kmw_get_googlemap()" source="phpDocumentor.file.PPC:ERR-50013"/>
+    <error line="127" severity="notice" message="Parameter $height could not be found in \kmw_get_googlemap()" source="phpDocumentor.file.PPC:ERR-50013"/>
+    <error line="221" severity="error" message="Argument $atts is missing from the Docblock of kmw_get_info" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="221" severity="error" message="No summary for function \kmw_get_info()" source="phpDocumentor.file.PPC:ERR-50011"/>
+  </file>
+  <file name="kmw-fs\inc\wordpress-tweak.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="273" severity="error" message="Argument $wp_admin_bar is missing from the Docblock of kmw_replace_howdy" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="328" severity="error" message="Argument $content is missing from the Docblock of kmw_edit_text" source="phpDocumentor.file.PPC:ERR-50015"/>
+  </file>
+</checkstyle>

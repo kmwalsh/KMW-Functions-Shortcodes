@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+/**
+ * Content formatting filters such as trademark and registration mark.
+ * 
+ * @package KMW-FS\Content Formatting
+ */
+
+if ( ! function_exists( 'kmw_format_the_content' ) ) {
+
+    // WORDPRESS CORE
+    add_filter('the_content', 'kmw_format_the_content');
+    add_filter('the_title', 'kmw_format_the_content');
+    add_filter('the_excerpt', 'kmw_format_the_content');
+
+    // PLUGINS
+    // advanced custom fields
+    add_filter('acf/format_value', 'kmw_format_the_content', 10, 3);
+
+	/**
+	 * Standardize trademark and registration marks.
+	 * Please remember that people are generally very varied. There will be a myriad different way people can enter different content different ways on a site. These were useful in one specific instance for me, but maybe your client decided to wrap every registration mark with a span and custom inline styling (sorry for ya). These content formatting filters can (and *should*) only go so far. If you wind up with many dozens of lines in this file, something is going wrong in the content pipeline, and you may want to attempt to address that through your organization, client, whoever you're working for. 
+	 * 
+	 */ 
+    function kmw_format_the_content($content)
+    {
+
+        // (some) possible variations of the registration mark
+        $content = str_replace(&quot;&amp;reg;&quot;, &quot;&lt;sup&gt;&amp;reg;&lt;/sup&gt;&quot;, $content);
+        $content = str_replace(&quot;&reg;&quot;, &quot;&lt;sup&gt;&amp;reg;&lt;/sup&gt;&quot;, $content);
+        $content = str_replace(&quot;\u00AE&quot;, &quot;&lt;sup&gt;&amp;reg;&lt;/sup&gt;&quot;, $content);
+
+        // (some) possible variations of trade mark
+        $content = str_replace(&quot;&amp;trade;&quot;, &quot;&lt;sup&gt;&amp;trade;&lt;/sup&gt;&quot;, $content);
+        $content = str_replace(&quot;&trade;&quot;, &quot;&lt;sup&gt;&amp;trade;&lt;/sup&gt;&quot;, $content);
+        $content = str_replace(&quot;\u2122&quot;, &quot;&lt;sup&gt;&amp;trade;&lt;/sup&gt;&quot;, $content);
+
+        return $content;
+    }
+    
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

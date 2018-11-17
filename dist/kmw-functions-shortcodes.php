@@ -21,6 +21,9 @@ if ( ! function_exists( 'kmw_fs_scripts' ) ) {
 	
 	add_action( 'wp_enqueue_scripts', 'kmw_fs_scripts' );
 
+	/**
+	 * Enqueue scripts and styles for this plugin.
+	 */ 
 	function kmw_fs_scripts() {
 		
 		// plugin javascript
@@ -29,6 +32,7 @@ if ( ! function_exists( 'kmw_fs_scripts' ) ) {
 		
 		// plugin css styles
 		wp_enqueue_style( 'kmw-fs-css', plugins_url( 'css/style.css', __FILE__ ) );
+		
 		// font awesome
 		wp_enqueue_style( 'fontawesome-css', plugins_url( 'fonts/fontawesome.min.css', __FILE__ ) );
 		
