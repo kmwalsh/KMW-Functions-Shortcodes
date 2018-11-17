@@ -19,7 +19,7 @@ require_once('kmw-fs/inc/wordpress-tweak.php');
 
 
 if ( ! function_exists( 'kmw_fs_scripts' ) ) {
-	
+
 	add_action( 'wp_enqueue_scripts', 'kmw_fs_scripts' );
 
 	/**

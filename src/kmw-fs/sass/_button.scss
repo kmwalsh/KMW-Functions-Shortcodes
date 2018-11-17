@@ -5,12 +5,48 @@
 .button
 {
   // put your button styles here
-}
 
-.button span 
-{
-  font-size: 85%;
-  
-	display: block; 
-	margin-top: 5px; 
+  background: #ff0066;
+  color: white;
+
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  line-height: 1;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+
+  border: 1px solid #CC0052;
+  border-radius: 2px;
+
+  transition: 200ms linear all;
+
+  &:link,
+  &:visited,
+  &:active,
+  &:hover
+  {
+    color: white;
+  }
+
+  &:hover,
+  &:focus
+  {
+    background: #CC0052;
+    border-color: #530022;
+  }
+
+  span 
+  {
+    font-size: 85%;
+    
+    display: block;
+    margin-top: 5px; 
+
+    font-weight: normal;
+  }
+
 }

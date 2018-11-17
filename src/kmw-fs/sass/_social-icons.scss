@@ -1,58 +1,59 @@
 .soc {
-    overflow:hidden;
-    margin:0; padding:0;
-    list-style:none;
+    overflow: hidden;
+    margin: 0; 
+    padding: 0;
+    list-style: none;
+
+    li 
+    {
+        display: inline-block;
+    }
+
+    a 
+    {
+        
+        color: white;
+        font-family: "Font Awesome" !important;
+        
+        font-style: normal;
+        text-decoration: none;
+        font-weight: 400;    
+        text-align: center;
+        
+        font-size: 17px;
+        
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        
+        overflow: hidden;
+        display: block;
+        position: relative;
+        margin-right: 4px;
+        z-index: 1;
+        
+        border-radius: 0;
+        
+        background-color: none;
+    }
+
+    i
+    {
+        display: block;
+        line-height: 32px;
+    }
 }
 
-.soc li {
-    display:inline-block;
-    *display:inline;
-    zoom:1;
-}
-
-.soc li a {
-    color: #fff !important;
-    font-family: "Font Awesome" !important;
-    
-    font-style:normal;
-    text-decoration:none;
-    font-weight:400;    
-    text-align:center;
-    
-    font-size: 17px;
-    
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    
-      -webkit-box-sizing:border-box;
-      -moz-box-sizing:border-box;
-      -ms-box-sizing:border-box;
-      -o-box-sizing:border-box;
-    box-sizing:border-box;
-    
-    overflow:hidden;
-    display:block;
-    position: relative;
-    margin-right: 4px;
-    z-index: 1;
-    
-      -webkit-border-radius: 0px;
-      -moz-border-radius: 0px;
-    border-radius: 0px;
-    
-    background-color: none;
-}
-
-.soc li i {
-	display:block;
-  line-height: 32px;
-}
-
-.soc-icon-last{ margin:0 !important; }
+.soc-icon-last { margin:0 !important; }
 
 .soc-twitter { background-color: #4da7de; }
 .soc-reddit { background-color: #e74a1e; }
