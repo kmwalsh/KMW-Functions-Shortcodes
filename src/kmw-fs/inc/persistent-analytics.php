@@ -17,7 +17,8 @@ if ( ! function_exists( 'kmw_add_googleanalytics' ) ) {
 	function kmw_add_googleanalytics() {
 		if ( ! is_admin() ) {
 		ob_start(); ?>
-		
+
+<!-- Google Analytics added by KMW-FS -->
 <script>
 // add Google Analytics code here
 </script>

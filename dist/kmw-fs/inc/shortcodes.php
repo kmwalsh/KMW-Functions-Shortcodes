@@ -14,17 +14,20 @@ if ( ! function_exists( 'kmw_get_logged_out_content' ) ) {
 	 * WordPress shortcode with start and end tags. Produces text visible only to Logged Out users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.
 	 * 
 	 * @example: ```[logged_out]stuff only logged out users see[/logged_out]```
+	 * @param array $atts WordPress shortcode atts. Empty.
 	 * @param string $content The content you want only logged out users to see.
 	 */ 
 
-	function kmw_get_logged_out_content( $content = null  ) {
+	function kmw_get_logged_out_content( $atts, $content = null ) {
+		extract( shortcode_atts( array(), $atts ) );
+
 		if( is_user_logged_in() ) {
 			echo '';
 		} else {
-			$output = do_shortcode($content);
-			return $output;
+			return do_shortcode($content);
 		}
 	}
+
 }
 
 if ( ! function_exists( 'kmw_get_logged_in_content' ) ) {
@@ -35,11 +38,14 @@ if ( ! function_exists( 'kmw_get_logged_in_content' ) ) {
 	 * WordPress shortcode with start and end tags. Produces text visible only to Logged In users. **Note:** This is only for small tidbits like a login form on the sidebar etc. There are much better ways to protect content with much more granular permissions than this offers, this is basically just for "calls to action" and other very simple stuff.
 	 * 
 	 * @example: ```[logged_in]stuff only logged in users see[/logged_in]```
+	 * @param array $atts WordPress shortcode atts. Empty.
 	 * @param string $content The content you want only logged in users to see. Accepts shortcodes.
 	 */ 
 
-	function kmw_get_logged_in_content( $content = null  ) {
-		if( ! is_user_logged_in() ) {
+	function kmw_get_logged_in_content( $atts, $content = null ) {
+		extract( shortcode_atts( array(), $atts ) );
+
+		if ( ! is_user_logged_in() ) {
 			echo '';
 		} else {
 			return do_shortcode($content);
