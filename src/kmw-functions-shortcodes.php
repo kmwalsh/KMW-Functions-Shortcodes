@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: KMW Functions & Shortcodes
- * Plugin URI: http://katemwalsh.com
- * Description: Some useful custom functions.
- * Author: KMW
+ * Plugin URI: https://github.com/kmwalsh/KMW-Functions-Shortcodes
+ * Description: Some useful custom functions, shortcodes, content formatting filters, and WordPress clean-up/tweaks.
+ * Author: K. M. Walsh
  * Author URI: http://katemwalsh.com
- * Version: 0.1.0
+ * Version: 2.0.0
  * 
  * @package KMW-FS
  */
