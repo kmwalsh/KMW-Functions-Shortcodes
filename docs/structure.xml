@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="KMW WordPress Functions and Shortcodes" version="2.8.5">
+  <partials/>
+  <file path="kmw-fs\inc\wordpress-clean.php" generated-path="kmw-fs.inc.wordpress-clean.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+  </file>
+  <file path="kmw-fs\inc\content-format-filters.php" generated-path="kmw-fs.inc.content-format-filters.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+  </file>
+  <file path="kmw-fs\inc\persistent-analytics.php" generated-path="kmw-fs.inc.persistent-analytics.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+  </file>
+  <file path="kmw-fs\inc\template-functions.php" generated-path="kmw-fs.inc.template-functions.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+  </file>
+  <file path="kmw-functions-shortcodes.php" generated-path="kmw-functions-shortcodes.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+  </file>
+  <file path="kmw-fs\inc\shortcodes.php" generated-path="kmw-fs.inc.shortcodes.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+  </file>
+  <file path="kmw-fs\inc\wordpress-tweak.php" generated-path="kmw-fs.inc.wordpress-tweak.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <deprecated count="0"/>
+</project>

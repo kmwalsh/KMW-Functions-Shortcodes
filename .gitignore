@@ -1,0 +1,9 @@
+#npm
+node_modules
+
+#composer
+vendor
+
+#phpdoc - i think i should ignore these but i really don't know
+docs/phpdoc-cache-*
+docs/reports

@@ -1,0 +1,17 @@
+{
+    "name": "kmw-wordpress-functions-shortcodes",
+    "version": "2.0.0",
+    "description": "A drop-in mu-plugin for WordPress containing helpful functions and shortcodes.",
+    "keywords": [
+        "wordpress"
+    ],
+    "repository": "https://github.com/kmwalsh/KMW-Functions-Shortcodes.git",
+    "homepage": "https://github.com/kmwalsh/KMW-Functions-Shortcodes",
+    "author": "K. M. Walsh <kmw@katemwalsh.com>",
+    "dependencies": {},
+    "devDependencies": {
+        "font-awesome": "^4.7.0",
+        "gulp": "^3.9.1",
+        "node-sass": "^4.10.0"
+    }
+}

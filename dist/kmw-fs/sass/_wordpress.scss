@@ -1,0 +1,213 @@
+/**
+ * =============================================================
+ * WP ADMIN BAR
+ * =============================================================
+ */
+
+ @media all and(min-width:782px)
+ {
+ 
+     body.admin-bar .site-header {
+         margin-top: 32px;
+     }
+ 
+ } //@media
+ 
+ @media (max-width: 782px)
+ {
+ 
+     body.admin-bar .site-header {
+         margin-top: 46px;
+     }
+ 
+ } //@media
+ 
+ @media all and(max-width:601px)
+ {
+     
+     #wpadminbar {
+         position: fixed;
+     }
+ 
+ } //@media
+ 
+ /*--------------------------------------------------------------
+ ## edit post link
+ --------------------------------------------------------------*/
+ footer.entry-footer .edit-link {
+ 
+ }
+ 
+ /*--------------------------------------------------------------
+ # Alignments
+ --------------------------------------------------------------*/
+ 
+ //override WordPress inserting sizing into HTML
+ //didn't look good on mobile what with the images and all
+ img {
+     &.alignleft,
+     &.alignright,
+     &.aligncenter {
+         height: auto;
+     }
+ }
+ 
+ @media all and(min-width: 900px)
+ {
+     .alignleft {
+         display: inline;
+         float: left;
+         margin-right: 1.5em !important;
+     }
+ 
+     .alignright {
+         display: inline;
+         float: right;
+         margin-left: 1.5em !important;
+     }
+ 
+     .aligncenter {
+         clear: both;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+     }
+ }
+ 
+ /*--------------------------------------------------------------
+ ## Media
+ --------------------------------------------------------------*/
+ .page-content .wp-smiley,
+ .entry-content .wp-smiley,
+ .comment-content .wp-smiley {
+     border: none;
+     margin-bottom: 0;
+     margin-top: 0;
+     padding: 0;
+ }
+ 
+ /* Make sure embeds and iframes fit their containers. */
+ embed,
+ iframe,
+ object {
+     max-width: 100%;
+ }
+ 
+ /*--------------------------------------------------------------
+ ## Captions
+ --------------------------------------------------------------*/
+ .wp-caption {
+     margin-top: 0;
+     padding-top: 0;
+     margin-bottom: 1.5em;
+     max-width: 100%;
+     font-size: rem(14px);
+ 
+     img[class*="wp-image-"] {
+         //@include center-block;
+     }
+ 
+     .wp-caption-text {
+         margin: 0.8075em 0;
+     }
+ }
+ 
+ .wp-caption-text {
+     text-align: center;
+ }
+ 
+ 
+ /*--------------------------------------------------------------
+ ## Galleries
+ --------------------------------------------------------------*/
+ .gallery {
+     margin-bottom: 1.5em;
+ 
+     clear: both;
+ 
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-items: flex-start;
+     justify-content: space-between;
+ 
+     figure {
+         margin: 0;
+     }
+ }
+ 
+ .gallery-item {
+     text-align: left;
+     vertical-align: top;
+     width: 100%;
+ 
+     .gallery-columns-2 & {
+         max-width: 48%;
+     }
+ 
+     .gallery-columns-3 & {
+         max-width: 31.33%;
+     }
+ 
+     .gallery-columns-4 & {
+         max-width: 23%;
+     }
+ 
+     .gallery-columns-5 & {
+         max-width: 18%;
+     }
+ 
+     .gallery-columns-6 & {
+         max-width: 13.66%;
+     }
+ 
+     .gallery-columns-7 & {
+         max-width: 12.28%;
+     }
+ 
+     .gallery-columns-8 & {
+         max-width: 10.5%;
+     }
+ 
+     .gallery-columns-9 & {
+         max-width: 9.11%;
+     }
+ }
+ 
+ .gallery-caption {
+     display: block;
+ };
+ 
+ /*--------------------------------------------------------------
+ ## Accessibility
+ --------------------------------------------------------------*/
+ 
+ /* Text meant only for screen readers. */
+ .screen-reader-text {
+     clip: rect(1px, 1px, 1px, 1px);
+     position: absolute !important;
+     height: 1px;
+     width: 1px;
+     overflow: hidden;
+ 
+     &:focus {
+         border-radius: 3px;
+         box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+         clip: auto !important;
+         display: block;
+         font-weight: bold;
+         height: auto;
+         left: 5px;
+         line-height: normal;
+         padding: 15px 23px 14px;
+         text-decoration: none;
+         top: 5px;
+         width: auto;
+         z-index: 100000; /* Above WP toolbar. */
+     }
+ }
+ 
+ /* Do not show the outline on the skip link target. */
+ #content[tabindex="-1"]:focus {
+     outline: 0;
+ }
