@@ -1,0 +1,30 @@
+/**
+ * Uses IDs because this should only show up exactly once on your site.
+ */
+
+a#floating-mobile-phone 
+{ 
+    display:none; 
+}
+
+@media only screen and (max-width:600px) 
+{
+
+    a#floating-mobile-phone
+    {
+        /*theming-related: colors, fonts, sizing, etc. edit at will*/
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        
+        /*positioning-related: don't edit unless you're css-confident*/
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+
+} //@media

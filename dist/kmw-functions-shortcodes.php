@@ -10,6 +10,7 @@
  * @package KMW-FS
  */
 
+require_once('kmw-fs/inc/content-format-filters.php');
 require_once('kmw-fs/inc/persistent-analytics.php');
 require_once('kmw-fs/inc/shortcodes.php');
 require_once('kmw-fs/inc/template-functions.php');
@@ -27,14 +28,14 @@ if ( ! function_exists( 'kmw_fs_scripts' ) ) {
 	function kmw_fs_scripts() {
 		
 		// plugin javascript
-		wp_register_script( 'kmw-fs-js', plugins_url( 'js/script.min.js', __FILE__ ), array( 'jQuery' ), '1.0.0', true );
-		wp_enqueue_script( 'kmw-fs-js' );
+		wp_register_script( 'kmw-fs-scripts', plugins_url( 'kmw-fs/js/script.min.js', __FILE__ ), array( 'jQuery' ), '1.0.0', true );
+		wp_enqueue_script( 'kmw-fs-scripts' );
 		
 		// plugin css styles
-		wp_enqueue_style( 'kmw-fs-css', plugins_url( 'css/style.css', __FILE__ ) );
+		wp_enqueue_style( 'kmw-fs-style', plugins_url( 'kmw-fs/css/app.css', __FILE__ ) );
 		
 		// font awesome
-		wp_enqueue_style( 'fontawesome-css', plugins_url( 'fonts/fontawesome.min.css', __FILE__ ) );
+		wp_enqueue_style( 'font-awesome', plugins_url( 'kmw-fs/css/font-awesome.min.css', __FILE__ ) );
 		
 	}
 }
